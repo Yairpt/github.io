@@ -1,0 +1,1128 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Help_function_library_yair module &mdash; Wave_Function_Propagation 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Structure_vis module" href="Structure_vis.html" />
+    <link rel="prev" title="Locpot_class module" href="Locpot_class.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Wave_Function_Propagation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">WaveFunctionPropagation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Stage_1.html">Stage_1 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Stage_2.html">Stage_2 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Locpot_class.html">Locpot_class module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Help_function_library_yair module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure_vis.html">Structure_vis module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="savitzky_golay.html">savitzky_golay module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Wave_Function_Propagation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">WaveFunctionPropagation</a> &raquo;</li>
+        
+      <li>Help_function_library_yair module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Help_function_library_yair.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-Help_function_library_yair">
+<span id="help-function-library-yair-module"></span><h1>Help_function_library_yair module<a class="headerlink" href="#module-Help_function_library_yair" title="Permalink to this headline">¶</a></h1>
+<p>Created on Mon Nov 22 18:17:17 2021
+&#64;author: Yair Reichman</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Help_function_library_yair.Constants">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">Constants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eVA</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#Constants"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.Constants" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that aims to handle constants and unit conversion.
+Sometimes it implemented as an instance attribute, and it appears at the initiation function, then
+it can be called as : &lt;instance&gt;.cons
+Other times it imported as an outer scope instance of the Constants class and then treated as
+just a class varibale.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Help_function_library_yair.Constants.set_eVA">
+<span class="sig-name descname"><span class="pre">set_eVA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eVA</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#Constants.set_eVA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.Constants.set_eVA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Help_function_library_yair.Constants.eV2J">
+<span class="sig-name descname"><span class="pre">eV2J</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ener_value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#Constants.eV2J"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.Constants.eV2J" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ener_value</strong> (<em>float</em>) – gets energy value in eV.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>Float</em> – returns energy value in J.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Help_function_library_yair.Constants.J2eV">
+<span class="sig-name descname"><span class="pre">J2eV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ener_value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#Constants.J2eV"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.Constants.J2eV" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ener_value</strong> (<em>float</em>) – gets energy value in J.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>Float</em> – returns energy value in eV.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Help_function_library_yair.Constants.A2m">
+<span class="sig-name descname"><span class="pre">A2m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conver_value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#Constants.A2m"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.Constants.A2m" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>conver_value</strong> (<em>float</em>) – Gets metric value in A.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float</em> – returns metric value in m.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Help_function_library_yair.Constants.m2A">
+<span class="sig-name descname"><span class="pre">m2A</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conver_value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#Constants.m2A"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.Constants.m2A" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>conver_value</strong> (<em>float</em>) – Gets metric value in m.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float</em> – returns metric value in A.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Help_function_library_yair.Constants.sec2fs">
+<span class="sig-name descname"><span class="pre">sec2fs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conver_value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#Constants.sec2fs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.Constants.sec2fs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Help_function_library_yair.Constants.fs2sec">
+<span class="sig-name descname"><span class="pre">fs2sec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conver_value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#Constants.fs2sec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.Constants.fs2sec" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.to_1D_vec">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">to_1D_vec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#to_1D_vec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.to_1D_vec" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vec</strong> (<em>np.array</em>) – This method enforce any 1D vector in any form into the shape of 1D vector in the shpae of (n,)
+while n is the number of rows. Pay attention that there is no another axis, and all opertations
+such as tranpose does not take any action on the resulted vector.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np.array</em> – The original vector in a form of a 1D vector.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.find_peak_half_max_width">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">find_peak_half_max_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locpot_vec</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#find_peak_half_max_width"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.find_peak_half_max_width" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>locpot_vec</strong> (<cite>numpy.ndarray</cite>, (N,2)) – Gets a 2d matrix with two columns represents [:,0] = positionscoords,
+and [:,1] represents the potential values (v(z)).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>flaot</em> – It returns the average width of the peaks.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.to_column_vec">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">to_column_vec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#to_column_vec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.to_column_vec" title="Permalink to this definition">¶</a></dt>
+<dd><p>As oppose the to_1D_vec method, this function do the opposite, it
+enforce any 1D or a column vector into column vector in the form (n,1)
+where n is the number of rows. Pay attention that here we hve addtitonal
+axis where we can perform an actions like traspose.
+:param vec: The original vector we wish convert into a column vector
+:type vec: np.array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>np.array</em> – The original vector in a form of a coulmn vector.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.to_row_vec">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">to_row_vec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#to_row_vec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.to_row_vec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to to_column_vec but it enforces the original vector into
+a row vector of the form (1,n) where n is the number of columns here.
+:param vec: The original vector we wish convert into a row vector
+:type vec: np.array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>np.array</em> – The original vector in a form of a row vector.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.find_peaks">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">find_peaks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#find_peaks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.find_peaks" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>np.array</em><em>, </em><em>array_like</em>) – The Spatial coordinates vector.</p></li>
+<li><p><strong>y</strong> (<em>np.array</em><em>, </em><em>array_like</em>) – The functional values of the spatial coordiantes vector. The definiion for <cite>f(x) = y</cite>. Usually will be the local potential vector.</p></li>
+<li><p><strong>to_plot</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – Flag that determines whether to enable plotting or not.</p></li>
+<li><p><strong>dist</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – The distance between peaks.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>numpy.ndarray</cite> – It returns a matrix of two columns. The first column is for the peaks position, and the second column is for and their heights. It also can plot.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.find_peaks_maxima">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">find_peaks_maxima</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_local_maxima</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prominence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#find_peaks_maxima"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.find_peaks_maxima" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>np.array</em><em>, </em><em>array_like</em>) – spatial coordinates vector.</p></li>
+<li><p><strong>y</strong> (<em>np.array</em><em>, </em><em>array_like</em>) – Potential values v(z) vector.</p></li>
+<li><p><strong>ignore_local_maxima</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – It enables to turn on the option to ignore local maxima points.</p></li>
+<li><p><strong>to_plot</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – Flag that determines whether to enable plotting or not.</p></li>
+<li><p><strong>prominence</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>the default is None</em>) – Input to detemine the prominence threshold for the find_peak.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>numpy.ndarray</cite> – It returns a matrix of the maximum peaks. The first column is the maximum peaks position. The second column is the
+maximum peaks height. It also can plot.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.get_prominence">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">get_prominence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_of_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#get_prominence"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.get_prominence" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> (<em>np.array</em><em>, </em><em>array_like</em>) – The spatial coordinates vector.</p></li>
+<li><p><strong>v</strong> (<em>np.array</em><em>, </em><em>array_like</em>) – The potential values (v(z)) vector</p></li>
+<li><p><strong>num_of_min</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default : None</em>) – Input to detemine how many kind of minima’s we have in our system.</p></li>
+<li><p><strong>is_max</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default : None</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>int</cite> – The prominence of out system regarding the main number of minima’s.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.find_peaks_minima">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">find_peaks_minima</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_local_minima</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prominence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#find_peaks_minima"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.find_peaks_minima" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>np.array</em><em>, </em><em>array_like</em>) – The spatial coordinates vector.</p></li>
+<li><p><strong>y</strong> (<em>np.array</em><em>, </em><em>array_like</em>) – The potential values (v(z)) vector</p></li>
+<li><p><strong>ignore_local_minima</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – It enables to turn on the option to ignore local minima points.</p></li>
+<li><p><strong>to_plot</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – This is a flag that determines whether to enable plotting or not.</p></li>
+<li><p><strong>prominence</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>the default is None</em>) – Input to detemine the prominence threshold for the find_peak.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>numpy.ndarray</cite> – It returns a matrix of the minimum peaks. The first column is the minimum peaks position. The second column is the
+minimum peaks height. It also can plot.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.create_k_grid">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">create_k_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimention</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1D'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#create_k_grid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.create_k_grid" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>N</strong> (<em>int/float</em>) – The number of measuerment sample. The number of the k-grid points.</p></li>
+<li><p><strong>L</strong> (<em>int/float</em>) – The actual length of the system. Should be given in units of [m].</p></li>
+<li><p><strong>dimention</strong> (<em>str</em><em>, </em><em>{'1D'</em><em>, </em><em>'2D'}</em><em>, </em><em>optional</em><em>, </em><em>default: '1D'</em>) – The choices are in the brackets. It defines the K-grid for 1D or 2D mesh.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>K grid vector. Column vector. (numpy array with a shape of (N,1))</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.normalize_wave_function_numerically">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">normalize_wave_function_numerically</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meter'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#normalize_wave_function_numerically"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.normalize_wave_function_numerically" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> (<em>np.array</em><em>, </em><em>array_like</em>) – The spatial coordinates vector where the wave function spreads.</p></li>
+<li><p><strong>wave_function</strong> (<em>np.array</em><em>, </em><em>array_like</em>) – The complex values of the wave function in at the relevant z positions.</p></li>
+<li><p><strong>units</strong> (<em>str</em><em>, </em><em>{'Meter'</em><em>, </em><em>'Angstrum'</em><em>]</em><em>, </em><em>optioanl</em><em>, </em><em>default: 'Meter'</em>) – The choices are in the brackets. It defines the units of the normilization factor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>A</strong> (<em>flaat</em>) – The numeric normaliztion factor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.normalize_wave_function">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">normalize_wave_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wave_equation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound_up</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound_down</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meter'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#normalize_wave_function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.normalize_wave_function" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wave_equation</strong> (<em>lambda</em>) – It is in a lambda function format. It can be a static function or a lambda state.
+The equation of the wave function we wish to normalize. In this project, mainly supplied as
+a gaussian wave function.</p></li>
+<li><p><strong>bound_up</strong> (<em>int/float</em><em>, </em><em>optional</em><em>, </em><em>default: smp.oo</em>) – The intgration boundaries. (default = inifinity)</p></li>
+<li><p><strong>bound_down</strong> (<em>int/float</em><em>, </em><em>optional</em><em>, </em><em>default: -smp.oo</em>) – The intgration boundaries. (default = -inifinity)</p></li>
+<li><p><strong>units</strong> (<em>str</em><em>, </em><em>{'Meter'</em><em>, </em><em>'Angstrum'</em><em>]</em><em>, </em><em>optioanl</em><em>, </em><em>default: 'Meter'</em>) – The choices are in the brackets. It defines the units of the normilization factor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>A</strong> (<em>int/float</em>) – The normalization factor. Where psi(x) = A*f(x) -&gt; it returns A.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.normalize_wave_function_sym">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">normalize_wave_function_sym</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wave_equation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound_up</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">oo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound_down</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meter'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#normalize_wave_function_sym"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.normalize_wave_function_sym" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wave_equation</strong> (<em>lambda</em>) – It is in a lambda function format. It can be a static function or a lambda state.
+The equation of the wave function we wish to normalize. In this project, mainly supplied as
+a gaussian wave function.</p></li>
+<li><p><strong>bound_up</strong> (<em>int/float</em><em>, </em><em>optional</em><em>, </em><em>default: smp.oo</em>) – The intgration boundaries. (default = inifinity)</p></li>
+<li><p><strong>bound_down</strong> (<em>int/float</em><em>, </em><em>optional</em><em>, </em><em>default: -smp.oo</em>) – The intgration boundaries. (default = -inifinity)</p></li>
+<li><p><strong>units</strong> (<em>str</em><em>, </em><em>{'Meter'</em><em>, </em><em>'Angstrum'</em><em>]</em><em>, </em><em>optioanl</em><em>, </em><em>default: 'Meter'</em>) – The choices are in the brackets. It defines the units of the normilization factor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>A</strong> (<em>float</em>) – The symbolic normaliztion factor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.is_normalized">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">is_normalized</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meter'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#is_normalized"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.is_normalized" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> (<em>np.array</em><em>, </em><em>array_like</em>) – The spatial coordinates the wave function is specified at.</p></li>
+<li><p><strong>psi_values</strong> (<em>np.array</em><em>, </em><em>array_like</em>) – The wavefunction values along the spatial coordinates. Must suit the units for angstrums.</p></li>
+<li><p><strong>units</strong> (<em>str</em><em>, </em><em>{'Meter'</em><em>, </em><em>'Angstrum'</em><em>]</em><em>, </em><em>optioanl</em><em>, </em><em>default: 'Meter'</em>) – The choices are in the brackets. It defines the units of the normilization factor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>bool</em> – It checks if the wave function is normalized, True if it does, atherwise it returns False.
+It performs numerical integrarion and checks if it to be equal to 1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.gaussian_function_sym">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">gaussian_function_sym</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimention</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1D'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#gaussian_function_sym"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.gaussian_function_sym" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>k0</strong> (<em>float</em>) – The initial momentum value,</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – The standard devaiation of the gaussian wave-function.</p></li>
+<li><p><strong>z0</strong> (<em>float</em>) – Initial poisition where the wave function is centered at.</p></li>
+<li><p><strong>dimention</strong> (<em>str</em><em>, </em><em>{'1D'</em><em>, </em><em>'2D'}</em><em>, </em><em>optional</em><em>, </em><em>default: '1D'</em>) – The choices are in the brackets. It defines the K-grid for 1D or 2D mesh.</p></li>
+<li><p><strong>A</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If we already calculated the normaliztion factor we can supply it here.
+Otherwise it calculate from scratch here.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>lambda</em> – It returns a symbolic expression of the wavefunction, in lambda format.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.gaussian_function">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">gaussian_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimention</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1D'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#gaussian_function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.gaussian_function" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>np.array</em>) – The spatial coordinates vector.</p></li>
+<li><p><strong>k0</strong> (<em>float</em>) – The initial momentum value,</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – The standard devaiation of the gaussian wave-function.</p></li>
+<li><p><strong>z0</strong> (<em>float</em>) – Initial poisition where the wave function is centered at.</p></li>
+<li><p><strong>dimention</strong> (<em>str</em><em>, </em><em>{'1D'</em><em>, </em><em>'2D'}</em><em>, </em><em>optional</em><em>, </em><em>default: '1D'</em>) – The choices are in the brackets. It defines the K-grid for 1D or 2D mesh.</p></li>
+<li><p><strong>A</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If we already calculated the normaliztion factor we can supply it here.
+Otherwise it calculate from scratch here.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np.array</em> – The wave function vector.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.get_psi0">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">get_psi0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimention</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1D'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sqrd_psi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meter'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#get_psi0"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.get_psi0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>k0</strong> (<em>float</em>) – The initial momentum value,</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – The standard devaiation of the gaussian wave-function.</p></li>
+<li><p><strong>z0</strong> (<em>float</em>) – Initial poisition where the wave function is centered at.</p></li>
+<li><p><strong>dimention</strong> (<em>str</em><em>, </em><em>{'1D'</em><em>, </em><em>'2D'}</em><em>, </em><em>optional</em><em>, </em><em>default: '1D'</em>) – The choices are in the brackets. It defines the K-grid for 1D or 2D mesh.</p></li>
+<li><p><strong>sqrd_psi</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – It gives an optiona to return also the absolute sqrd of the wave function.</p></li>
+<li><p><strong>units</strong> (<em>str</em><em>, </em><em>{'Meter'</em><em>, </em><em>'Angstrum'</em><em>]</em><em>, </em><em>optioanl</em><em>, </em><em>default: 'Meter'</em>) – The choices are in the brackets. It defines the units of the normilization factor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np.array, np.array</em> – The first vector represents the spatial coordinates grid
+and the second vector represnts the wave function value at this position. the values are complex numbers.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.get_first_derivative_fft">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">get_first_derivative_fft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#get_first_derivative_fft"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.get_first_derivative_fft" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>np.array</em>) – The spatial coordinates vector.</p></li>
+<li><p><strong>y</strong> (<em>np.array</em>) – The appropriate function-values corresponds the spatial coordinates vector.</p></li>
+<li><p><strong>L</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – It should be supplied with the length of the system. It stands for the creation of the K-grid vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np.array, np.array</em> – It returns the spatial coordinates vector and the first derivative vecotr.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.get_second_derivative_fft">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">get_second_derivative_fft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#get_second_derivative_fft"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.get_second_derivative_fft" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>np.array</em>) – The spatial coordinates vector.</p></li>
+<li><p><strong>y</strong> (<em>np.array</em>) – The appropriate function-values corresponds the spatial coordinates vector.</p></li>
+<li><p><strong>L</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – It should be supplied with the length of the system. It stands for the creation of the K-grid vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np.array, np.array</em> – It returns the spatial coordinates vector and the second derivative vecotr.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.get_first_derivative">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">get_first_derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#get_first_derivative"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.get_first_derivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Numerical derivative
+:param x: The spatial coordinates vector.
+:type x: np.array
+:param y: The appropriate function-values corresponds the spatial coordinates vector.
+:type y: np.array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>np.array, np.array</em> – It returns the spatial coordinates vector and the first derivative vector.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.get_second_derivative">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">get_second_derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#get_second_derivative"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.get_second_derivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Numerical derivative
+:param x: The spatial coordinates vector.
+:type x: np.array
+:param y: The appropriate function-values corresponds the spatial coordinates vector.
+:type y: np.array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>np.array, np.array</em> – It returns the spatial coordinates vector and the second derivative vector.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.interpolate_pchip">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">interpolate_pchip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#interpolate_pchip"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.interpolate_pchip" title="Permalink to this definition">¶</a></dt>
+<dd><p>The interpolant uses monotonic cubic splines to find the value of new points.
+(PCHIP stands for Piecewise Cubic Hermite Interpolating Polynomial).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>N</strong> (<em>int/float</em>) – It rerpesents the number of the desired samples.</p></li>
+<li><p><strong>*args</strong> (<cite>numpy.ndarray</cite> (N, 2)/ np.array, np.array) – It the first column is for the coords vector, and the second column is for the potential. It can handle an input
+in the form of a 2-column matrix or two different array_like arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>new_coords</strong> (<em>np.array,(n,)</em>) – It is the bew coords divided into the number of the N partition given as input.</p></li>
+<li><p><strong>v</strong> (<em>np.array (n,)</em>) – It is the new potential divided into the number of the N partitiongiven as an input.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.interpolate_cubic">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">interpolate_cubic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#interpolate_cubic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.interpolate_cubic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cubic interpolation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>N</strong> (<em>int/float</em>) – It rerpesents the number of the desired samples.</p></li>
+<li><p><strong>*args</strong> (<cite>numpy.ndarray</cite> (N, 2)/ np.array, np.array) – It the first column is for the coords vector, and the second column is for the potential. It can handle an input
+in the form of a 2-column matrix or two different array_like arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>new_coords</strong> (<em>np.array,(n,)</em>) – It is the bew coords divided into the number of the N partition given as input.</p></li>
+<li><p><strong>v</strong> (<em>np.array (n,)</em>) – It is the new potential divided into the number of the N partitiongiven as an input.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.potential_expectation_nadav">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">potential_expectation_nadav</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">psi0_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#potential_expectation_nadav"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.potential_expectation_nadav" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>psi0_values</strong> (<em>np.array</em>) – The wave-function values in a vector.</p></li>
+<li><p><strong>dx</strong> (<em>float</em>) – The spatial grid spacing.</p></li>
+<li><p><strong>v</strong> (<em>np.array</em>) – The local potential vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float</em> – It returns the value of the Potential Energy expectation value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.kinetic_energy_operator">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">kinetic_energy_operator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">psi0_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#kinetic_energy_operator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.kinetic_energy_operator" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>psi0_values</strong> (<em>np.array</em>) – The wave-function values in a vector.</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – The spatial grid vector.</p></li>
+<li><p><strong>L</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – The length of the system. if not suuplied it is calculated as
+the difference between the last value of z and its first value. L=z[-1]-z[0]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np.array</em> – It returns a vector of the results that comes after operates the kinetic energy operator on the wave-function vector.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.kinetic_energy_expectation_value">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">kinetic_energy_expectation_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">psi0_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#kinetic_energy_expectation_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.kinetic_energy_expectation_value" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>psi0_values</strong> (<em>np.array</em>) – The wave-function values in a vector.</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – The spatial grid vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float</em> – It returns the value of the Kinetic Energy expectation value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.initial_momentum_yair">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">initial_momentum_yair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#initial_momentum_yair"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.initial_momentum_yair" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sigma</strong> (<em>float/int</em>) – Standard deviation in spatial grid for the gaussin wave function.</p></li>
+<li><p><strong>E0</strong> (<em>float/int</em>) – Initial Energy. Usually stands for the energy value of an electorn located at the bootom of the
+conduction band.</p></li>
+<li><p><strong>L</strong> (<em>float/int</em>) – The length of the system.</p></li>
+<li><p><strong>z0</strong> (<em>float/int</em>) – Initial position where the gaussian wave-packet is centered.</p></li>
+<li><p><strong>A</strong> (<em>float/int</em>) – Normaliztion factor.</p></li>
+<li><p><strong>T0</strong> (<em>float/int</em>) – Initial Kinetic energy.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float</em> – The initial momentum of an electorn.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.find_closest_value_in_array">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">find_closest_value_in_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#find_closest_value_in_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.find_closest_value_in_array" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num</strong> (<em>int/float</em>) – The value we wish to locate in the given array.</p></li>
+<li><p><strong>arr</strong> (<em>np.array</em>) – The array in which we wish to find the index of the closest value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>int, float</em> – It returns an index of the closest value (An integer) . And the closest value, position (a float).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.to_2_column_mat">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">to_2_column_mat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#to_2_column_mat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.to_2_column_mat" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vec</strong> (<cite>numpy.ndarray</cite>) – The input vector we wish convert.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>numpy.ndarray</cite> – It retruns the input matrix in a form of 2 columns.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.find_adjacent_minima_maxima">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">find_adjacent_minima_maxima</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_peak_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prominence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#find_adjacent_minima_maxima"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.find_adjacent_minima_maxima" title="Permalink to this definition">¶</a></dt>
+<dd><p>Very not elegnat and very complex method to find adjacent minima to maxima point in a locpot vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> (<em>np.array</em>) – The spatial coordinates vector.</p></li>
+<li><p><strong>v</strong> (<em>np.array</em>) – The local potential vector.</p></li>
+<li><p><strong>start_peak_pos</strong> (<em>float</em>) – The initial position where to start seaching for the minima point.</p></li>
+<li><p><strong>reverse</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – It enables to look for maxima to minima adjacent points. (The reverse order).</p></li>
+<li><p><strong>prominence</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – The prominence of the peak. It helps to detemine what peaks we wish relate during the calculation.
+For more inforamtion about this mathematical entity it is recommended to look for it on web (it has to be with topology in mathematics)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>(int, float), (int, float)</em> – It returns the values of the index and the position of the minima and maxima points with respect to the order in the
+reverse flag. If not supplied, the first index,position pair regards the minima point and the second index,position pair
+regards the maxima points. Otherwise - it is returned in the reveresed order. index - is an integer, and position is a float.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.force_psi_units">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">force_psi_units</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">psi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meter'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#force_psi_units"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.force_psi_units" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>psi</strong> (<em>np.array</em>) – The vector of the wave-function values to be forced into the desired units.</p></li>
+<li><p><strong>units</strong> (<em>str</em><em>, </em><em>{'Meter'</em><em>, </em><em>'Angstrum'</em><em>]</em><em>, </em><em>optioanl</em><em>, </em><em>default: 'Meter'</em>) – The choices are in the brackets. It defines the units of the normilization factor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np.array</em> – It returns a vector of the Wave-function values in the desired units.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.run_one_time_step">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">run_one_time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wave_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#run_one_time_step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.run_one_time_step" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wave_function</strong> (<em>np.array</em>) – Wave function values vector to be propagated.</p></li>
+<li><p><strong>time_step</strong> (<em>float</em>) – dt. time step in which we wish perform the propagation proccess</p></li>
+<li><p><strong>v</strong> (<em>np.array</em>) – Should be as the same size as <cite>wave_function</cite> vector.
+This is the local potential vector.</p></li>
+<li><p><strong>z</strong> (<em>np.array.</em>) – Should be as the same size as <cite>wave_function</cite> vector.
+This is the spatial coordinates vector.</p></li>
+<li><p><strong>k</strong> (<em>np.array.</em>) – Should be as the same size as <cite>wave_function</cite> vector.
+This the <cite>k grid</cite> axis vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np. array</em> – It returns a vector of the one time-step propagated wave-fucntion.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.calculate_probability_current">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">calculate_probability_current</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wave_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#calculate_probability_current"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.calculate_probability_current" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wave_function</strong> (<em>np.array</em>) – wave function values vector to be propagated.</p></li>
+<li><p><strong>k</strong> (<em>np.array.</em>) – Should be as the same size as wave_function vector.
+This is the <cite>k grid</cite> axis vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float</em> – It returns the probabilty current.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.fft_first_drivative">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">fft_first_drivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wave_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#fft_first_drivative"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.fft_first_drivative" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wave_function</strong> (<em>np.array</em>) – The wave function values vector to be propagated.</p></li>
+<li><p><strong>k</strong> (<em>np.array</em>) – Should be as the same size as <cite>wave_function</cite> vector.
+This is the <cite>k-grid</cite> axis vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np.array</em> – It returns the first derivative of the wave_function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.cumulative_probabilty">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">cumulative_probabilty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wave_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_cutoff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dz</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#cumulative_probabilty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.cumulative_probabilty" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wave_function</strong> (<em>np.array</em>) – The Wave function values vector to be propagated.</p></li>
+<li><p><strong>z</strong> (<em>np.array</em>) – The z spatial coordinates vector</p></li>
+<li><p><strong>z_cutoff</strong> (<em>float</em>) – The maximum value of to calculate the accumulated probability.</p></li>
+<li><p><strong>dz</strong> (<em>float</em>) – The spatial gird differnce between points.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float</em> – The <cite>cumulative_probabilty</cite> value up to certain <code class="docutils literal notranslate"><span class="pre">z</span></code> value coordinate.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.transmision_coeff">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">transmision_coeff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">psi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">final_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#transmision_coeff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.transmision_coeff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integration for the all time of simulation, summing all the probabilty currents, for each time-step in the simulation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>psi0</strong> (<em>np.array</em>) – The wave function values vector.</p></li>
+<li><p><strong>Nt</strong> (<em>int</em>) – The number of time-step that are being made.</p></li>
+<li><p><strong>dt</strong> (<em>float</em>) – The time-step magnitude.</p></li>
+<li><p><strong>v</strong> (<em>np.array</em>) – The local potential vector.</p></li>
+<li><p><strong>z</strong> (<em>np.array</em>) – The spatial coordinates vector.</p></li>
+<li><p><strong>k</strong> (<em>np.array</em>) – K grid vector.</p></li>
+<li><p><strong>z_position</strong> (<em>float</em>) – The position at which it calculates the transimission coefficient. Should
+be given in units of Meter.</p></li>
+<li><p><strong>path_to_save</strong> (<em>string</em><em>, </em><em>optional</em><em>, </em><em>default:None</em>) – The absolute path to save the figure obtained from the calculation</p></li>
+<li><p><strong>final_time</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default:None</em>) – The top boundary for the integration as we can integrate until this given time of the simulation. It stands for <strong>t_f</strong></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float</em> – It returns the calculated transmission coefficient.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.adjust_grid_density">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">adjust_grid_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#adjust_grid_density"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.adjust_grid_density" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>density</strong> (<em>float</em>) – The grid density. A quantity that was determined through the convergence tests and is the number
+of the space steps divided by the length of the system.</p></li>
+<li><p><strong>z</strong> (<em>np.array</em>) – The spatial coordinates vector.</p></li>
+<li><p><strong>v</strong> (<em>np.array</em>) – The local potntial vector along the system.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np.array, np.array</em> – It returns the new spatial coordinate vecor as z, and the new local potneital vector as v.
+They have been adjusted to the defined grid density supplied.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.reach_plateau">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">reach_plateau</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">critiria_plat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol_2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.005</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#reach_plateau"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.reach_plateau" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>np.array</em>) – The independent variable, usually will be the spatial grid vector or time space vector.</p></li>
+<li><p><strong>y</strong> (<em>np.array</em>) – The dependent variable. The matching value of a function to the respective x value. Can be the comulative probabilty.</p></li>
+<li><p><strong>critiria_plat</strong> (<em>float. optional</em><em>, </em><em>default: 0.0001</em>) – The value we decide to relate as no change in slope to determine the plateau region. The closer to zero
+the stricter critiria.</p></li>
+<li><p><strong>tol_2</strong> (<em>float. optional</em><em>, </em><em>default: 0.005</em>) – The value we decide to relate as no change in values of the cumulative probabilty. The smaller value -
+the stricter critiria.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>bool</em> – It checks whether we reached plateau, namely steady-state according to the vector supplied.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.is_straight_line">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">is_straight_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#is_straight_line"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.is_straight_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the input vector repesents a straight line
+:param y: The vector values we wish to check.
+:type y: np.array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>bool</em> – It returns whether the input vector is a straight line or not.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.find_interface">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">find_interface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#find_interface"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.find_interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a method that was duplicated from LOCPOT Class. It also appears there.
+It helps when we wish to allocate the interface position of the system,
+but have not created a locpot class instance.
+:param x: It stands for the spatial coordinates array.
+:type x: np.array
+:param y: The local potential vector.
+:type y: np.array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>int, float</em> – It returns the interface index in the locpot vector, and its <cite>z</cite> position
+If the system does not contain an interface, it just returns the last spatial grid coordinate position
+and its corresponded index. -&gt; [index,position] ==&gt; [len(z)-1,z[-1]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.integrate_trapz">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">integrate_trapz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#integrate_trapz"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.integrate_trapz" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector</strong> (<em>np.array</em>) – The vector we wish the integrate numerically.</p></li>
+<li><p><strong>df</strong> (<em>float</em>) – The step difference between adjacent steps. It assumes the the vector is spaced evenlly.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float</em> – The numerical intgration result.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.plateau_val">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">plateau_val</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">critiria</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#plateau_val"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.plateau_val" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>np.array</em>) – The spatial coordinates array.</p></li>
+<li><p><strong>y</strong> (<em>np.array</em>) – The relevent functional values that corresponds the spatial coordinates vector.</p></li>
+<li><p><strong>critiria</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: 0.0001</em>) – It can be changed for more of less strict evalutaion where the plateau has come.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float</em> – It returns the average value of the points that the plateau spread on.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.is_peak_minimum">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">is_peak_minimum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">peaks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#is_peak_minimum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.is_peak_minimum" title="Permalink to this definition">¶</a></dt>
+<dd><p class="rubric">Notes</p>
+<p>Pay attention - the peak is within the range of the peaks and not at its edges.
+Otherwise it will raise an index out-of-range error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peaks</strong> (<cite>numpt.ndarray</cite>, (N,2)) – The first column stands for the spatial poisition of the peaks.
+The second column is for the height of the peaks.</p></li>
+<li><p><strong>peak</strong> (<em>list:</em><em> [</em><em>int</em><em>,</em><em>float</em><em>,</em><em>float</em><em>]</em>) – The first argument is for the index of the peak inside the peaks array,
+The second argument is for the position of the peak. The third argument is for the height of the peak.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>bool</em> – This function checks whether a given peak is a minimum point. (or at least a local minimum).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.is_peak_maximum">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">is_peak_maximum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">peaks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#is_peak_maximum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.is_peak_maximum" title="Permalink to this definition">¶</a></dt>
+<dd><p class="rubric">Notes</p>
+<p>Pay attention - the peak is within the range of the peaks and not at its edges.
+Otherwise it will raise an index out-of-range error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peaks</strong> (<cite>numpy.ndarray</cite>, (N,2)) – The first column stands for the spatial poisition of the peaks.
+The second column is for the height of the peaks.</p></li>
+<li><p><strong>peak</strong> (<em>list:</em><em> [</em><em>int</em><em>,</em><em>float</em><em>,</em><em>float</em><em>]</em>) – The first argument is for the index of the peak inside the peaks array,
+The second argument is for the position of the peak. The third argument is for the height of the peak.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>bool</em> – This function checks whether a given peak is a maximum point. (or at least a local maximum).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.is_peak_maximum_2">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">is_peak_maximum_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak_pos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#is_peak_maximum_2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.is_peak_maximum_2" title="Permalink to this definition">¶</a></dt>
+<dd><p class="rubric">Notes</p>
+<p>Pay attention - the peak is within the range of the peaks and not at its edges.
+Otherwise it will raise an index out-of-range error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>bool</em> – This function checks whether a given peak is a maximum point. (or at least a local maximum).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.r_sqrd">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">r_sqrd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v_original</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_fitted</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#r_sqrd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.r_sqrd" title="Permalink to this definition">¶</a></dt>
+<dd><p class="rubric">Notes</p>
+<p>This function calculates the R square fitting parameter between two vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v_original</strong> (<em>np.array</em>) – The vector contains the values whom we wish to compare to.</p></li>
+<li><p><strong>v_fitted</strong> (<em>np.array</em>) – The vector contains the values whom we wish to fit .</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float</em> – The calculated R sqrd value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Help_function_library_yair.smooth_function">
+<span class="sig-prename descclassname"><span class="pre">Help_function_library_yair.</span></span><span class="sig-name descname"><span class="pre">smooth_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Help_function_library_yair.html#smooth_function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Help_function_library_yair.smooth_function" title="Permalink to this definition">¶</a></dt>
+<dd><p class="rubric">Notes</p>
+<p>This function calculates the R square fitting parameter between two vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> (<em>np.array</em>) – The spatial coordinates array.</p></li>
+<li><p><strong>v</strong> (<em>np.array</em>) – The relevent function’s values that corresponds the spatial coordinates vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np.array, np.array</em> – This function returns the smoothed local potential vector with the corresponding spatial coordinates.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Structure_vis.html" class="btn btn-neutral float-right" title="Structure_vis module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Locpot_class.html" class="btn btn-neutral float-left" title="Locpot_class module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, MCT&amp;YairR&amp;NadavS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

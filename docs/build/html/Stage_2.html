@@ -1,0 +1,606 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Stage_2 module &mdash; Wave_Function_Propagation 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Locpot_class module" href="Locpot_class.html" />
+    <link rel="prev" title="Stage_1 module" href="Stage_1.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Wave_Function_Propagation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">WaveFunctionPropagation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Stage_1.html">Stage_1 module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Stage_2 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Locpot_class.html">Locpot_class module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Help_function_library_yair.html">Help_function_library_yair module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure_vis.html">Structure_vis module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="savitzky_golay.html">savitzky_golay module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Wave_Function_Propagation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">WaveFunctionPropagation</a> &raquo;</li>
+        
+      <li>Stage_2 module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Stage_2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-Stage_2">
+<span id="stage-2-module"></span><h1>Stage_2 module<a class="headerlink" href="#module-Stage_2" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="Stage_2.Stage_2">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Stage_2.</span></span><span class="sig-name descname"><span class="pre">Stage_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Locp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_density</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi0_dic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">To_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_left</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_right</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is2d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Has_interface</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limits_for_itself</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class aimed to locate the initial wavefunction we created at stage_1,
+on the relevant material from stage_1, in the middle of the material in the interface system.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Locp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_density</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi0_dic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">To_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_left</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_right</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is2d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Has_interface</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limits_for_itself</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Initilization</strong>:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Locp</strong> (<em>Locpot_yair.object</em>) – Locpot object that holds the information about the interface system.</p></li>
+<li><p><strong>grid_density</strong> (<em>float</em>) – grid density factor calculated in stage_1</p></li>
+<li><p><strong>psi0_dic</strong> (<em>dict</em>) – psi0 parameters given in a dictionary form. Necessary to reconstruct the initial wave function in the
+interface system.</p></li>
+<li><p><strong>allmin</strong> (<em>np.array</em><em>, </em><em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – Not necessary for the intialization. Holds all the minimum peaks of the local potential.</p></li>
+<li><p><strong>allmax</strong> (<em>np.array</em><em>, </em><em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – Not necessary for the intialization. Holds all the maximum peaks of the local potential.</p></li>
+<li><p><strong>To_plot</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – A flag to determine whether to plot when this option is availale.</p></li>
+<li><p><strong>Nt</strong> (<em>int</em>) – The number of time steps we would like to have in the propagation proccess.</p></li>
+<li><p><strong>dt</strong> (<em>float</em>) – The size of the time step in <code class="docutils literal notranslate"><span class="pre">sec</span></code>.</p></li>
+<li><p><strong>multi_left</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 2</em>) – How many times we wish add a unit cell length to the left side of the interface.
+Namely, for <code class="docutils literal notranslate"><span class="pre">multi_left</span> <span class="pre">=</span> <span class="pre">2</span></code>, we are adding <code class="docutils literal notranslate"><span class="pre">2*a_left</span></code> to the locpot vector.</p></li>
+<li><p><strong>multi_right</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 2</em>) – How many times we wish add a unit cell length to the right side of the interface.
+Namely, for <code class="docutils literal notranslate"><span class="pre">multi_right</span> <span class="pre">=</span> <span class="pre">2</span></code>, we are adding <code class="docutils literal notranslate"><span class="pre">2*a_right</span></code> to the locpot vector.</p></li>
+<li><p><strong>Has_interface</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: True</em>) – A flag indicates whether the system conatains an interface or not.
+For a surface, it is recomended to relate the vaccum as the interface.</p></li>
+<li><p><strong>limits_for_itself</strong> (<em>list</em><em> [</em><em>float</em><em>, </em><em>float</em><em>]</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – This parameter is an optional for flexibility for chosing the range of where the pick the bulk-like potential.
+This should be input as a list of two floats, the first one is for the left limit and the second one is for the left limit.
+Should be given as the same units of the spatial coordainates vector, <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p></li>
+<li><p><strong>ref_point</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If the current system does not have an interface, and we want to treat it as it as a reference point for later calculations.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.elongate_interface_potential">
+<span class="sig-name descname"><span class="pre">elongate_interface_potential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_iteslf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side_from_itself</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'both'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interface_position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_to_insert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locpot_vector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">To_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">original_interface</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.elongate_interface_potential"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.elongate_interface_potential" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>from_iteslf</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: True</em>) – This flag indicates whether to take the bulk-like potential that is going to be
+multiplied and then inserted - from itself - namely - from the middle of the local potnetial - far from the
+interface positions (since it satisfies periodic condition). Otherwise - it is taken from outer-scope file -
+supplied in the same directory and is referred to the bulk-material locpot file - obtained from VASP.</p></li>
+<li><p><strong>side_from_itself</strong> (<em>{'both'</em><em>, </em><em>'right'</em><em>, </em><em>'left'}</em><em>, </em><em>optional</em><em>, </em><em>default: 'both'</em>) – Choices in brackets. This flag is being active only when the flag <code class="docutils literal notranslate"><span class="pre">from_iteslf=True</span></code>.</p></li>
+<li><p><strong>from_iteslf</strong> – It indicates where we wish to elngate our local potential vector. -&gt; From both side, or only from only one side
+of the interface.</p></li>
+<li><p><strong>interface_position</strong> (<em>np.float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – Enables to input the interface position manually. It refers to the spaciol coordinates.
+If your system does not have an interface, you should supply this argument with ‘’0’’.</p></li>
+<li><p><strong>manual</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – Enables the user to elongate its locpot vector’s system manually.
+If this flag is turned on by supplying <code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">True</span></code>, the user must also supply <code class="docutils literal notranslate"><span class="pre">z_in</span></code> and <code class="docutils literal notranslate"><span class="pre">v_in</span></code> vectors.</p></li>
+<li><p><strong>z_in</strong> (<em>np.array</em><em>, </em><em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – When the user decides on elongating manually its locpot vector’s system,
+he should supplied also <code class="docutils literal notranslate"><span class="pre">z_in</span></code> and <code class="docutils literal notranslate"><span class="pre">v_in</span></code> as the spatial gridcoordinates vector and the local potential vector
+respectively.</p></li>
+<li><p><strong>v_in</strong> (<em>np.array</em><em>, </em><em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – When the user decides on elongating manually its locpot vector’s system,
+he should supplied also <code class="docutils literal notranslate"><span class="pre">z_in</span></code> and <code class="docutils literal notranslate"><span class="pre">v_in</span></code> as the spatial gridcoordinates vector and the local potential vector
+respectively.</p></li>
+<li><p><strong>multi_manual</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1</em>) – When the user decides on elongating manually its locpot vector’s system,
+it enables him to determine how many times to multiply the inserted locpot vector. This flag is also used
+in the case when to option of <code class="docutils literal notranslate"><span class="pre">from_itself</span></code> is turned on.</p></li>
+<li><p><strong>pos_to_insert</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – When this argument is supplied, is enables determine the position where
+to insert the locpot vector during the elongation proccess.</p></li>
+<li><p><strong>locpot_vector</strong> (<cite>numpy.ndarray</cite>, (N, 2), optional, default: None) – The first column is the spatial grid/coordinates vector, and the second vector is local potential.
+It enables to elongate a locpot vector that is not related
+to the class instance attributes.</p></li>
+<li><p><strong>To_update</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: True</em>) – A flag indicates if the changes that have being made are going to be updated as the instance attributes.</p></li>
+<li><p><strong>original_interface</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If specified, all the extention procedure will be considering this interface position during all the procedure.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Elongated locpot_vec</strong> (<em>numpy.ndarray, (N, 2)</em>) – It consists of 2 columns. First column is the spatial coordinates, the second column is the local potential values.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.update_converged_spatial_grid">
+<span class="sig-name descname"><span class="pre">update_converged_spatial_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vecor_to_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_converged_vec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_interface</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.update_converged_spatial_grid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.update_converged_spatial_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Calculate spatial grid applying the converged grid density, for the interface system.</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vecor_to_update</strong> (<cite>numpy.ndarray</cite>, (N, 2), optional, default: None) – This is a 2 column matrix. First colmn is <code class="docutils literal notranslate"><span class="pre">z</span></code>, the spatial coordinates vector and second is <code class="docutils literal notranslate"><span class="pre">v</span></code>, the local potential vector.
+If we wish apply this method on not related vector, not an object attribute.</p></li>
+<li><p><strong>update_converged_vec</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: True</em>) – A flag indicates whether to update the instance attribute with the new converged
+vector we obatin through this method.</p></li>
+<li><p><strong>update_interface</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – A flag indicates whether to update the instance attribute of the new interface found with the
+new interface position as we get by applying this method.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>None</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.find_initial_position_to_center_psi0">
+<span class="sig-name descname"><span class="pre">find_initial_position_to_center_psi0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Left'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual_pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.find_initial_position_to_center_psi0"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.find_initial_position_to_center_psi0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>init_side</strong> (<em>str</em><em>, </em><em>{'Left'</em><em>, </em><em>'Right'}</em><em>, </em><em>Optional</em><em>, </em><em>default: 'Left'</em>) – The Choices are in the brackets. Determines what side of the interface to look for the inialization position.</p></li>
+<li><p><strong>manual</strong> (<em>int</em><em> or </em><em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – It can be int for index insertion or a float for position insertion.
+Instead for automatically look for initial position, you can supply it directly via this argument.
+Also it assume that it is given as a spatial position.</p></li>
+<li><p><strong>manual_pos</strong> (<em>int</em><em> or </em><em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If specified, this will be the actual position that corresponding the local potential vector - where the wave-function will be initialized at.</p></li>
+<li><p><strong>index</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – If it is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then the manual argument will be read as index instead of spatial position.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>z0_position, z0_index</strong> (<em>float, int</em>) – The position and the matching index in the interfce system locpot vector,
+where psi0 will be initialized at. By default it will be at the middle of the left-side material.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.find_new_interface">
+<span class="sig-name descname"><span class="pre">find_new_interface</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.find_new_interface"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.find_new_interface" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>After updating our spcial grid, and applying the grid density that we calculated at `stage_1`,
+this method aims to point out the new interface of the updated locpot vector.</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>The new interface position. (in Angstrum).</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.initialize_psi0">
+<span class="sig-name descname"><span class="pre">initialize_psi0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Left'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual_center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual_z0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual_z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual_v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">To_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual_psi_dic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.initialize_psi0"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.initialize_psi0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>init_side</strong> (<em>str</em><em>, </em><em>{'Left'</em><em>, </em><em>'Right'}</em><em>, </em><em>optional</em><em>, </em><em>default: 'Left'</em>) – Enables to choose from what side of the interface to initialize the wave function.</p></li>
+<li><p><strong>manual_center</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – Enables th choose whether to initialize the wave function at a certain <code class="docutils literal notranslate"><span class="pre">z</span></code> coordinate as an input from the user.</p></li>
+<li><p><strong>manual_z0</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – Manual input for initializing the wave function at a certain desired location. The wave function will be centered at z0_manual.</p></li>
+<li><p><strong>manual_z</strong> (<em>np.array</em><em>, </em><em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – Enables flexibility in initializing <cite>psi0</cite> at a given locpot vector, as <code class="docutils literal notranslate"><span class="pre">z_input</span></code> and <code class="docutils literal notranslate"><span class="pre">v_input</span></code>.</p></li>
+<li><p><strong>manual_v</strong> (<em>np.array</em><em>, </em><em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – Enables flexibility in initializing <cite>psi0</cite> at a given locpot vector, as <code class="docutils literal notranslate"><span class="pre">z_input</span></code> and <code class="docutils literal notranslate"><span class="pre">v_input</span></code>.</p></li>
+<li><p><strong>To_update</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: True</em>) – A flag to indicate if the changes that have being made are going to be updated as the instance attributes.</p></li>
+<li><p><strong>manual_psi_dic</strong> (<em>dict</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – The dictionary has to be from the structure of : <cite>{‘sigma’: np.float , ‘k0’: np.float, … }</cite>
+It enables to initilize the psi0 as we wish by giving it an input for the relevant parameters.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>psi0</strong> (<em>np.array, array_like</em>) – Wave-function values vector.</p></li>
+<li><p><strong>locpot</strong> (<em>numpy.ndarray, (N,2)</em>) – The corresponding spatial coordinates vector</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.get_most_relevant_z_coordinate_vec">
+<span class="sig-name descname"><span class="pre">get_most_relevant_z_coordinate_vec</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.get_most_relevant_z_coordinate_vec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.get_most_relevant_z_coordinate_vec" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>z, v</strong> (<em>np.array, np.array</em>) – z coordinate vector and v potential vector. It chooses the most relvant z and v vectors according to the steps that
+have already taken when running this function.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.calculate_E0">
+<span class="sig-name descname"><span class="pre">calculate_E0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">psi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.calculate_E0"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.calculate_E0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>psi</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is the wave-function vector attribute of <cite>Stage_2</cite> instance.</p></li>
+<li><p><strong>z_in</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is taken from <cite>locpot_vec[:,0]</cite> attribute of <cite>Stage_2</cite> instance.
+Vector of the spatial grid. (spatial coordinates)</p></li>
+<li><p><strong>v_in</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is taken from <cite>locpot_vec[:,1]</cite> attribute of <cite>Stage_2</cite> instance.
+Vector of the local potential.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>E0</strong> (<em>float</em>) – The expectation values of the total energy.</p></li>
+<li><p><strong>T0</strong> (<em>float</em>) – The expectation values of the kinetic energy.</p></li>
+<li><p><strong>V0</strong> (<em>float</em>) – The expectation values of the potnetial energy and potential energy, in [Joul].</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.propagate_psi">
+<span class="sig-name descname"><span class="pre">propagate_psi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">psi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.propagate_psi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.propagate_psi" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>psi</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is the wave-function vector attribute of <cite>Stage_2</cite> instance.</p></li>
+<li><p><strong>Nt</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is the wave-function vector attribute of <cite>Stage_2</cite> instance.
+The number of time-steps.</p></li>
+<li><p><strong>dt</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is the wave-function vector attribute of <cite>Stage_2</cite> instance
+The size of each time step the wave-function is propagated.</p></li>
+<li><p><strong>z_in</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is taken from <cite>locpot_vec[:,0]</cite> attribute of <cite>Stage_2</cite> instance.
+Vector of the spatial grid. (spatial coordinates)</p></li>
+<li><p><strong>v_in</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is taken from <cite>locpot_vec[:,1]</cite> attribute of <cite>Stage_2</cite> instance.
+Vector of the local potential.</p></li>
+<li><p><strong>path_to_save</strong> (<em>string</em><em>, </em><em>optional</em><em>, </em><em>default:None</em>) – The absolute path to save the figure obtained from the calculation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>None</em> – This method was built mainly to produce the simulation animation. If <code class="docutils literal notranslate"><span class="pre">To_plot</span></code> is not set to <cite>True</cite>,
+then this function does not take any action.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.set_To_plot">
+<span class="sig-name descname"><span class="pre">set_To_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">To_plot</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.set_To_plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.set_To_plot" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>To_plot</strong> (<em>bool</em>) – The input from the user, this method aims to set the <code class="docutils literal notranslate"><span class="pre">To_plot</span></code> attribute of the instance
+and enables the plotting feature that implemented in some of the class methods.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>None</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.cumulative_probabilty_through_interface">
+<span class="sig-name descname"><span class="pre">cumulative_probabilty_through_interface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">psi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.cumulative_probabilty_through_interface"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.cumulative_probabilty_through_interface" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>psi</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is the wave-function vector attribute of <cite>Stage_2</cite> instance.</p></li>
+<li><p><strong>Nt</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is the wave-function vector attribute of <cite>Stage_2</cite> instance.
+The number of time-steps.</p></li>
+<li><p><strong>dt</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is the wave-function vector attribute of <cite>Stage_2</cite> instance
+The size of each time step the wave-function is propagated.</p></li>
+<li><p><strong>z_in</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is taken from <cite>locpot_vec[:,0]</cite> attribute of <cite>Stage_2</cite> instance.
+Vector of the spatial grid. (spatial coordinates)</p></li>
+<li><p><strong>v_in</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is taken from <cite>locpot_vec[:,1]</cite> attribute of <cite>Stage_2</cite> instance.
+Vector of the local potential.</p></li>
+<li><p><strong>check_pos</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – In cases where we don’t have an interface and we wish supply a position
+where the cumulative probability is ggoing to be calculated.</p></li>
+<li><p><strong>path_to_save</strong> (<em>string</em><em>, </em><em>optional</em><em>, </em><em>default:None</em>) – The absolute path to save the figure obtained from the calculation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>results</strong> (<em>numpy.ndarray, (N,2)</em>) – This is a 2 columns vector, the first column vector represents the # of the time step.
+The second column vector represents the cumulative probabilty through interface.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.converge_system_size">
+<span class="sig-name descname"><span class="pre">converge_system_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">psi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">To_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Elongate_from_itself</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Multi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iteration_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Left'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual_center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual_z0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual_z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual_v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual_psi_dic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.converge_system_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.converge_system_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>More accurate name - converge simulation overall time
+:param psi: If not supplied, the default is the wave-function vector attribute of <cite>Stage_2</cite> instance.
+:type psi: np.array, optional, default: None
+:param Nt: If not supplied, the default is the wave-function vector attribute of <cite>Stage_2</cite> instance.</p>
+<blockquote>
+<div><p>The number of time-steps.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dt</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is the wave-function vector attribute of <cite>Stage_2</cite> instance
+The size of each time step the wave-function is propagated.</p></li>
+<li><p><strong>z_in</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is taken from <cite>locpot_vec[:,0]</cite> attribute of <cite>Stage_2</cite> instance.
+Vector of the spatial grid. (spatial coordinates)</p></li>
+<li><p><strong>v_in</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is taken from <cite>locpot_vec[:,1]</cite> attribute of <cite>Stage_2</cite> instance.
+Vector of the local potential.</p></li>
+<li><p><strong>To_update</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: True</em>) – A flag that indicates whether to update the instance attributes with the calculated converged parameters.</p></li>
+<li><p><strong>Elongate_from_itself</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: True</em>) – A flag that tells from where to take the bulk-like potential to be
+inserted during the elongation proccess.</p></li>
+<li><p><strong>Multi</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 2</em>) – A flag that tells how many time to multiply the inserted potenial during the elongation proccess.</p></li>
+<li><p><strong>iteration_num</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 20</em>) – How many iteration the convergence proccess will be hold.
+manual_center : bool, optional, default: False
+Enables th choose whether to initialize the wave function at a certain <code class="docutils literal notranslate"><span class="pre">z</span></code> coordinate as an input from the user.
+manual_center : bool, optional, default: False
+Enables th choose whether to initialize the wave function at a certain <code class="docutils literal notranslate"><span class="pre">z</span></code> coordinate as an input from the user.</p></li>
+<li><p><strong>init_side</strong> (<em>str</em><em>, </em><em>{'Left'</em><em>, </em><em>'Right'}</em><em>, </em><em>optional</em><em>, </em><em>default: 'Left'</em>) – For the psi0 initialization. Enables to choose from what side of the interface to initialize the wave function.</p></li>
+<li><p><strong>manual_center</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – For the psi0 initialization. Enables th choose whether to initialize the wave function at a certain <code class="docutils literal notranslate"><span class="pre">z</span></code> coordinate as an input from the user.</p></li>
+<li><p><strong>manual_z0</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – For the psi0 initialization. Manual input for initializing the wave function at a certain desired location. The wave function will be centered at z0_manual.</p></li>
+<li><p><strong>manual_z</strong> (<em>np.array</em><em>, </em><em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – For the psi0 initialization. Enables flexibility in initializing <cite>psi0</cite> at a given locpot vector, as <code class="docutils literal notranslate"><span class="pre">z_input</span></code> and <code class="docutils literal notranslate"><span class="pre">v_input</span></code>.</p></li>
+<li><p><strong>manual_v</strong> (<em>np.array</em><em>, </em><em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – For the psi0 initialization. Enables flexibility in initializing <cite>psi0</cite> at a given locpot vector, as <code class="docutils literal notranslate"><span class="pre">z_input</span></code> and <code class="docutils literal notranslate"><span class="pre">v_input</span></code>.</p></li>
+<li><p><strong>manual_psi_dic</strong> (<em>dict</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – For the psi0 initialization. The dictionary has to be from the structure of : <cite>{‘sigma’: np.float , ‘k0’: np.float, … }</cite>
+It enables to initilize the psi0 as we wish by giving it an input for the relevant parameters.</p></li>
+<li><p><strong>path_to_save</strong> (<em>string</em><em>, </em><em>optional</em><em>, </em><em>default:None</em>) – The absolute path to save the figure obtained from the calculation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>converged_z</strong> (<em>np.array</em>) – The converged vector of the spatial grid. (spatial coordinates)</p></li>
+<li><p><strong>converged_v</strong> (<em>np.array</em>) – The converged vector of the local potential</p></li>
+<li><p><strong>converged_psi</strong> (<em>np.array</em>) – The converged wave-function vector.</p></li>
+<li><p><strong>converged_Nt</strong> (<em>int</em>) – The converged time steps that were being made.</p></li>
+<li><p><strong>results</strong> (<em>numpy.ndarray, (N,2)</em>) – This is a 2 columns vector, the first column vector represents the # of the time step.
+The second column vector represents the cumulative probabilty through interface.</p></li>
+<li><p><strong>simulation_time</strong> (<em>float</em>) – The total time of the simulation. It is given in units of seconds. It is the multiplication of <code class="docutils literal notranslate"><span class="pre">Nt*dt</span></code>.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.converge_time_step">
+<span class="sig-name descname"><span class="pre">converge_time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">psi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_sim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">To_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">To_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.converge_time_step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.converge_time_step" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>psi</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is the wave-function vector attribute of <cite>Stage_2</cite> instance.</p></li>
+<li><p><strong>Nt</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is the wave-function vector attribute of <cite>Stage_2</cite> instance.
+The number of time-steps.</p></li>
+<li><p><strong>dt</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is the wave-function vector attribute of <cite>Stage_2</cite> instance
+The size of each time step the wave-function is propagated.</p></li>
+<li><p><strong>time_sim</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, it will be calculated from the product <code class="docutils literal notranslate"><span class="pre">Nt*dt</span></code>.
+However, it is supplied, it will be taken into account, and the dt will be taken into account too. Then Nt will be recalculated.</p></li>
+<li><p><strong>z_in</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is taken from <cite>locpot_vec[:,0]</cite> attribute of <cite>Stage_2</cite> instance.
+Vector of the spatial grid. (spatial coordinates)</p></li>
+<li><p><strong>v_in</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is taken from <cite>locpot_vec[:,1]</cite> attribute of <cite>Stage_2</cite> instance.
+Vector of the local potential.</p></li>
+<li><p><strong>To_update</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: True</em>) – A flag that indicates whether to update the instance attributes with the calculated converged parameters.</p></li>
+<li><p><strong>To_plot</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>defulat: False</em>) – A flag to determine whether to plot or not.</p></li>
+<li><p><strong>iterations</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 40</em>) – A flag the enables the user define how many times the converges test will run.</p></li>
+<li><p><strong>check_pos</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – In cases where we do not have an interface and we wish supply a position
+where the cumulative probability is ggoing to be calculated at.</p></li>
+<li><p><strong>tol</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: 0.005</em>) – The tolerance value which will be used as the criteria for the convergence test main loop. It compares the relevant values between two consecutive iterations and demands that the difference between them won’t exceeed the tolerance value.</p></li>
+<li><p><strong>path_to_save</strong> (<em>string</em><em>, </em><em>optional</em><em>, </em><em>default:None</em>) – The absolute path to save the figure obtained from the calculation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>dt</strong> (<em>float</em>) – The converged size of the time step.</p></li>
+<li><p><strong>Nt</strong> (<em>int</em>) – The converged number of the time steps that were being made through the simulation.</p></li>
+<li><p><strong>Total_Energy</strong> (<em>list, [[],[],[],[np.array]]</em>) – The first cell is the totoal magnitude at the end of the simulation, the second cell hold the first energy value
+at the beginning of the simulation, and the third cell holds the size of the time_step = dt at each iteration.
+The last cell hold the array with all the calculated energies along the convergence test.</p></li>
+<li><p><strong>Kinetic_Energy</strong> (<em>list, [[],[],[],[np.array]]</em>) – The same data structure as the Total_Energy.</p></li>
+<li><p><strong>Potential_Energy</strong> (<em>list, [[],[],[],[np.array]]</em>) – The same data structure as the Total_Energy.</p></li>
+<li><p><strong>prob_current</strong> (<em>list, [[],[],[],[np.array]]</em>) – The same data structure as the Total_Energy.</p></li>
+<li><p><strong>Cumulative_Prob</strong> (<em>list, [[],[],[],[np.array]]</em>) – The same data structure as the Total_Energy.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.model_interface">
+<span class="sig-name descname"><span class="pre">model_interface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interface_initial_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interface_final_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region_initial_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region_final_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Delta_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interface_pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.model_interface"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.model_interface" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>interface_initial_pos</strong> – </p></li>
+<li><p><strong>interface_final_pos</strong> – </p></li>
+<li><p><strong>region_initial_pos</strong> – </p></li>
+<li><p><strong>region_final_pos</strong> – </p></li>
+<li><p><strong>Delta_pos</strong> – </p></li>
+<li><p><strong>z_in</strong> – </p></li>
+<li><p><strong>v_in</strong> – </p></li>
+<li><p><strong>interface_pos</strong> – </p></li>
+<li><p><strong>path_to_save</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_2.Stage_2.update_ref_point">
+<span class="sig-name descname"><span class="pre">update_ref_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_point</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_2.html#Stage_2.update_ref_point"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_2.Stage_2.update_ref_point" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ref_point</strong> (<em>float</em>) – The new reference point you wish to update for.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>None</em> – Just update class object property.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Locpot_class.html" class="btn btn-neutral float-right" title="Locpot_class module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Stage_1.html" class="btn btn-neutral float-left" title="Stage_1 module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, MCT&amp;YairR&amp;NadavS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

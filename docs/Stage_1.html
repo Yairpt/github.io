@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Stage_1 module &mdash; Wave_Function_Propagation 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Stage_2 module" href="Stage_2.html" />
+    <link rel="prev" title="WaveFunctionPropagation" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Wave_Function_Propagation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">WaveFunctionPropagation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Stage_1 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Stage_2.html">Stage_2 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Locpot_class.html">Locpot_class module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Help_function_library_yair.html">Help_function_library_yair module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure_vis.html">Structure_vis module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="savitzky_golay.html">savitzky_golay module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Wave_Function_Propagation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">WaveFunctionPropagation</a> &raquo;</li>
+        
+      <li>Stage_1 module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Stage_1.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-Stage_1">
+<span id="stage-1-module"></span><h1>Stage_1 module<a class="headerlink" href="#module-Stage_1" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="Stage_1.Stage_1">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Stage_1.</span></span><span class="sig-name descname"><span class="pre">Stage_1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locpot_vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_original</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Max_z_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Noriginal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">To_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_1.html#Stage_1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_1.Stage_1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class aimed to create the initial wavefunction in its most general form, when it is
+initialized within the range of one of the materials in the system.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_1.Stage_1.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locpot_vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_original</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Max_z_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Noriginal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">To_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_1.html#Stage_1.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_1.Stage_1.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>locpot_vec</strong> (<cite>numpy.ndarray</cite>, (N,2)) – This is a 2 column matrix. The first colmn is <code class="docutils literal notranslate"><span class="pre">z</span></code>, the spatial coordinates vector and second is <code class="docutils literal notranslate"><span class="pre">v</span></code>, the local potential vector.</p></li>
+<li><p><strong>E0</strong> (<em>float</em>) – The initial energy of the wave-function. Accounted to the total energy of an electron at the bottom of the cunduction band (CBM).</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – The standard deviation of the guassian electron wave-pocket.</p></li>
+<li><p><strong>z_original</strong> (<em>np.array</em><em>, </em><em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – The original, initial spatial coordinates vector.</p></li>
+<li><p><strong>Max_z_iterations</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 10</em>) – The maximum number of the iterations that the loop will be going through until convergence of the drid density.</p></li>
+<li><p><strong>Noriginal</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – The initial/ original number of spatial steps, the number of <cite>dx</cite>’s in the spatial coordinates vector. If not
+supplied, it will take the value of <code class="docutils literal notranslate"><span class="pre">len(z_original)</span></code></p></li>
+<li><p><strong>allmin</strong> (<cite>numpy.ndarray</cite>, (N,2), default: None) – This is a matrix with 2 columns. The first column holds the minimum points position, and the second column
+holds the minimum points height. If not supplied it will take the matrix the resultd from
+<code class="docutils literal notranslate"><span class="pre">find_peaks_minima(self.locpot_vec[:,</span> <span class="pre">0],</span> <span class="pre">self.locpot_vec[:,</span> <span class="pre">1])</span></code>.</p></li>
+<li><p><strong>To_plot</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>defulat: False</em>) – A flag to determine whether to plot or not.</p></li>
+<li><p><strong>allmax</strong> (<cite>numpy.ndarray</cite>, (N,2), default: None) – This is a matrix with 2 columns. The first column holds the maximum points position, and the second column
+holds the maximum points height. If not supplied it will take the matrix the resultd from
+<code class="docutils literal notranslate"><span class="pre">find_peaks_maxima(self.locpot_vec[:,</span> <span class="pre">0],</span> <span class="pre">self.locpot_vec[:,</span> <span class="pre">1])</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_1.Stage_1.initial_wavefunc_energies">
+<span class="sig-name descname"><span class="pre">initial_wavefunc_energies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Multi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_1.html#Stage_1.initial_wavefunc_energies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_1.Stage_1.initial_wavefunc_energies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class method of Stage1. Calculate the initial Wavefunction</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>N</strong> (<em>int/float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – It can be delivered in order the determine the number of the samples
+that the wavefunction will be constructed based on it.</p></li>
+<li><p><strong>Multi</strong> (<em>int/float</em><em>, </em><em>optional</em><em>, </em><em>default: 5</em>) – If the initial unit is too small, you can choose
+how many times to mulyiply it in order to produce the initial wavefucntion
+matched the larger unit cell.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np.array, np.array, np.array, np.array, np.array, int</em> – zz - the new coords divided into N segments.
+vv - the new potential vector divided into N segments.
+psi0 - the initial wave function. (N,)
+T0 - initial kinteic energy. Float
+v0 - potential expectation value. Float.
+N - The number of the partition.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_1.Stage_1.calculate_E0">
+<span class="sig-name descname"><span class="pre">calculate_E0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_1.html#Stage_1.calculate_E0"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_1.Stage_1.calculate_E0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class method of Stage1. Calculating E0 per each N partition of space(z)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>zz</strong> (<em>np.array</em>) – Vector of the spatial grid. (spatial coordinates)</p></li>
+<li><p><strong>vv</strong> (<em>np.array</em>) – Vector of the local potential.</p></li>
+<li><p><strong>psi0</strong> (<em>np.array</em>) – The wave-function vector.</p></li>
+<li><p><strong>N</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – The number of spatial steps, the number of <cite>dx</cite>’s.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_1.Stage_1.converge_main_axis_grid">
+<span class="sig-name descname"><span class="pre">converge_main_axis_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_1.html#Stage_1.converge_main_axis_grid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_1.Stage_1.converge_main_axis_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converges the spatial grid of the system according to total energy difference of the tol parameter supplied
+as an input. The difference relates to two consecutive iterations. It also demands that the spatial spacing not
+be less than tol*sigma.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tol</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: 0.001</em>) – It refers to tolerance. And it can make the condition for convergence
+more or less strict.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>zz_convg</strong> (<em>np.array</em>) – The converged spatial grid vector.</p></li>
+<li><p><strong>vv_convg</strong> (<em>np.array</em>) – The converged local potential vector.</p></li>
+<li><p><strong>psi0_convg</strong> (<em>np.array</em>) – The converged wave function values vector.</p></li>
+<li><p><strong>grid_density</strong> (<em>float</em>) – The converged spatial grid density. It is defined as the number of the spatial points divided by the system length.</p></li>
+<li><p><strong>psi0_dic</strong> (<em>dict</em>) – It holds all the necessary parameters that relate to the converged system and the convereged wave-function.
+psi0_dic = {‘k0’ : , ‘sigma’:  , ‘E0’:  ,’zz’: zz_convg, ‘vv’:vv_convg,’N’: N_convg,’psi0’:psi0_convg}</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_1.Stage_1.get_psi_dic">
+<span class="sig-name descname"><span class="pre">get_psi_dic</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_1.html#Stage_1.get_psi_dic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_1.Stage_1.get_psi_dic" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>dict</em> – It retruns a initial wave function parameters in a dictionary for the next stage.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Stage_1.Stage_1.set_To_plot">
+<span class="sig-name descname"><span class="pre">set_To_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">To_plot</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_1.html#Stage_1.set_To_plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_1.Stage_1.set_To_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class method to set the <code class="docutils literal notranslate"><span class="pre">To_plot</span></code> attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>To_plot</strong> (<em>bool</em>) – It gets True or False whether to plot or not.</p></li>
+<li><p><strong>or</strong> (<em>This is a class method that enables to turn on plotting options</em>) – </p></li>
+<li><p><strong>on</strong> (<em>to turn them off. True = for turning</em>) – </p></li>
+<li><p><strong>off.</strong> (<em>False = for turning</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Stage_1.main">
+<span class="sig-prename descclassname"><span class="pre">Stage_1.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Stage_1.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Stage_1.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Stage_2.html" class="btn btn-neutral float-right" title="Stage_2 module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules.html" class="btn btn-neutral float-left" title="WaveFunctionPropagation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, MCT&amp;YairR&amp;NadavS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
