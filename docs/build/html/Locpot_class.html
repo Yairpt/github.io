@@ -1,0 +1,645 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Locpot_class module &mdash; Wave_Function_Propagation 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Help_function_library_yair module" href="Help_function_library_yair.html" />
+    <link rel="prev" title="Stage_2 module" href="Stage_2.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Wave_Function_Propagation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">WaveFunctionPropagation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Stage_1.html">Stage_1 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Stage_2.html">Stage_2 module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Locpot_class module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Help_function_library_yair.html">Help_function_library_yair module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure_vis.html">Structure_vis module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="savitzky_golay.html">savitzky_golay module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Wave_Function_Propagation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">WaveFunctionPropagation</a> &raquo;</li>
+        
+      <li>Locpot_class module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Locpot_class.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-Locpot_class">
+<span id="locpot-class-module"></span><h1>Locpot_class module<a class="headerlink" href="#module-Locpot_class" title="Permalink to this headline">¶</a></h1>
+<p>Created on Sun Oct  3 12:11:13 2021</p>
+<p>&#64;author: Yair Reichman</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Locpot_class.</span></span><span class="sig-name descname"><span class="pre">Locpot_yair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_locpot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_2D</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_bulk_material</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Has_interface</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Locpot_file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Locpot_file_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Bulk_Locpot_file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Bulk_Locpot_file_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Locpot_Full_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Locpot_bulk_materials_full_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_flip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_flipped</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class of locpot where all its properties and its methods can be found</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_locpot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_2D</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_bulk_material</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Has_interface</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Locpot_file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Locpot_file_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Bulk_Locpot_file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Bulk_Locpot_file_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Locpot_Full_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Locpot_bulk_materials_full_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_flip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_flipped</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_locpot</strong> (<em>pymatgen.io.vasp.outputs.Locpot</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – Can be initialized with an existing pymatgen locpot object.</p></li>
+<li><p><strong>axis_index</strong> (<em>int</em><em>,</em><em>{0: x</em><em>, </em><em>1: y</em><em>, </em><em>2: z}</em><em>, </em><em>optional</em><em>, </em><em>default: 2</em>) – The axis index to be averaged along. (for x, insert  axis_index=0, for y axis insert axis_index=1,
+and for z axis insert axis_index=2).</p></li>
+<li><p><strong>is_2D</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – A flag that enables to perform 2D calculations. Not all functions support 2D calculations yet.</p></li>
+<li><p><strong>bulk_material</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – Aims to skip unecessary steps in the initializtion process for loading bulk materials.</p></li>
+<li><p><strong>Locpot_file_name</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – Supply the string for the name of the locpot file, and also a string for the full path of the directory where the locpot files
+are located.</p></li>
+<li><p><strong>Locpot_file_directory</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – Supply the string for the name of the locpot file, and also a string for the full path of the directory where the locpot files
+are located.</p></li>
+<li><p><strong>Bulk_Locpot_file_name</strong> (<em>list/tuple</em><em> (</em><em>str</em><em>,</em><em>str</em><em>)</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – For two different bulk locpot file names and full paths - supply it in a form of a list uple. The first place is for the first bulk material
+and the second place is for the second bulk material.</p></li>
+<li><p><strong>Bulk_Locpot_file_directory</strong> (<em>list/tuple</em><em> (</em><em>str</em><em>,</em><em>str</em><em>)</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – For two different bulk locpot file names and full paths - supply it in a form of a list uple. The first place is for the first bulk material
+and the second place is for the second bulk material.</p></li>
+<li><p><strong>Locpot_Full_pat</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – Supply the string for the the full path of the Locpot file.</p></li>
+<li><p><strong>Locpot_bulk_materials_full_path</strong> (<em>list/tuple</em><em> (</em><em>str</em><em>,</em><em>str</em><em>)</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – For two different bulk locpot full paths - supply it in a form of a list        uple. The first place is for the first bulk material
+and the second place is for the second bulk material.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair.get_atoms_position">
+<span class="sig-name descname"><span class="pre">get_atoms_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair.get_atoms_position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair.get_atoms_position" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>self</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>numpy.ndarray</cite>, (N,5) – A matrix of the the coordinates of the atoms. There are 5 columns, the first three are the spatial coordinates of the atoms,
+as the first column is for x axis, the scond column is for the y axis, and the third column is for the z axis. The fourth column contains
+the atoms symbols, and the fifth and the last column has the atomic radius of the atoms.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair.averaging_along_axis">
+<span class="sig-name descname"><span class="pre">averaging_along_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locpot_vec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_plot_atoms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_plot_widths</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_plot_heights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_plot_cursor_choice</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair.averaging_along_axis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair.averaging_along_axis" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>locpot_vec</strong> (<em>np.array</em><em>, </em><em>optional. default : None</em>) – 2 Columns arrays for the spatial coordinates and the local potential values.</p></li>
+<li><p><strong>to_plot</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – A flag to determine whether to plot or not.</p></li>
+<li><p><strong>to_plot_atoms</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – A flag that represents the choice whether to plot or not another plot of the atoms arrangement in 1D.</p></li>
+<li><p><strong>to_plot_widths</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – A flag that represents the choice whether to annotate or not the peaks widths of the locpot.</p></li>
+<li><p><strong>to_plot_heights</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – A flag that represents the choice whether to annotate or not the peaks heights of the locpot.</p></li>
+<li><p><strong>to_plot_cursor_choice</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – A flag that represents the choice whether to show cursor lines and annotate each click with box.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>numpy.ndarray</cite>, (N,2) – It returns a locpot matrix.The first column is the vector that contains the spatial coordinates of system.
+The second column is the averaged potential along the desires axis.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair.find_interface">
+<span class="sig-name descname"><span class="pre">find_interface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair.find_interface"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair.find_interface" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>np.array</em><em>, </em><em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – It stands for the spatial coordinates array.
+If not supplied, is calcualted from the instance attribute self.locpot.</p></li>
+<li><p><strong>y</strong> (<em>np.array</em><em>, </em><em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – The local potential vector.
+If not supplied, is calcualted from the instance attribute <code class="docutils literal notranslate"><span class="pre">self.locpot</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float, float</em> – It returns the interface index in the locpot vector, and its z’s position
+If the system does not contain an interface, it just returns the last spatial grid coordinate position
+and its corresponded index. -&gt; [index,position] ==&gt; [len(z)-1,z[-1]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair.approximately">
+<span class="sig-name descname"><span class="pre">approximately</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compare_to</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair.approximately"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair.approximately" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compare_to</strong> (<em>int/float</em>) – The value we wish to compare to.</p></li>
+<li><p><strong>*args</strong> (<em>int/float/array_like</em>) – The values we wish to compare to.</p></li>
+<li><p><strong>tol</strong> (<em>int/float</em><em>, </em><em>optional</em><em>, </em><em>default: 5</em>) – In precents. The tolerance level we wish to apply. The default value is set to 5% tolerance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>bool</em> – It returns <cite>True</cite> or <cite>False</cite> whether the input value is in the proxmity range of the tolerance
+with respect to the the values supplied.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair.find_unit_cell_lattice_parameter">
+<span class="sig-name descname"><span class="pre">find_unit_cell_lattice_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_axis_rel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair.find_unit_cell_lattice_parameter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair.find_unit_cell_lattice_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>is_axis_rel</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: True</em>) – A flag that tells if the class object attribute - <cite>axis_index</cite>
+is the relevant to return the appropriate lattice parameter in that direction.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float</em> – The relevant lattice parameter.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair.find_all_permutations">
+<span class="sig-name descname"><span class="pre">find_all_permutations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">materials_list_strings</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair.find_all_permutations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair.find_all_permutations" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>materials_list_strings</strong> (<em>array_like</em><em>,</em><em>type: str</em>) – The input of the species names / materials names whithin the system</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> (<em>array_like,type: str</em>) – It returns all the combinations of materials or species that can be found.
+It suppose to locate locpot files of the bulk materials in the current working directory
+to be loaded into the interface Locpot object.
+It meant to answer cases where we have a material constructed of several species such as
+GaAsAlNand so on..</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair.set_locpot_bulk_materials">
+<span class="sig-name descname"><span class="pre">set_locpot_bulk_materials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bulk_material</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair.set_locpot_bulk_materials"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair.set_locpot_bulk_materials" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Loading the bulk materials’ locpots of the two materials involved in the interface system.</strong>
+:param bulk_material: Can be given for skipping to load another level of bulk material.
+:type bulk_material: bool, optional, default: False</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair.set_axis_index">
+<span class="sig-name descname"><span class="pre">set_axis_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair.set_axis_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair.set_axis_index" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis_ind</strong> (<em>int</em><em>, </em><em>{0: x</em><em>, </em><em>1: y</em><em>, </em><em>2: z}</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – The axis index we desire to update our object attribute.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>None</em> – <em>Just set up a new axis index property of the object instance.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair.set_is_2D">
+<span class="sig-name descname"><span class="pre">set_is_2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is2d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair.set_is_2D"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair.set_is_2D" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>is2d</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – A flag to determine whether the calculation should be performed in 2D.
+This is an editing method for the class object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>None</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair.find_position_to_insert">
+<span class="sig-name descname"><span class="pre">find_position_to_insert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zz</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair.find_position_to_insert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair.find_position_to_insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets Locpot object. Using the interface and bulk materials’ locpots.
+Look for the best place to insert the bulk locpot into the interface
+system locpot.
+Can be supplied in advance zz - spatial coordinates vector, and vv - local potential vector,
+to be referenced as the main vector to be searched to position to insert.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>zz</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is taken from <cite>self.locpot_vec[:, 0]</cite> attribute of <cite>Locpot_yair</cite> instance.
+Vector of the spatial grid. (spatial coordinates)</p></li>
+<li><p><strong>vv</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If not supplied, the default is taken from <cite>self.locpot_vec[:, 1]</cite> attribute of <cite>Locpot_yair</cite> instance.
+Vector of the local potential.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float, int</em> – It returns the position, and its corresponding index in the interface locpot interface. Regarding both the left side materials
+and the right side material. These 2 arrays of the form [,,] -&gt; where [start_ind, finish_ind, minima_position, max_R_sqrd]
+If we don’t have an interface, it returns the last index,position of the spatial grid vector.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair.set_locpot_vec">
+<span class="sig-name descname"><span class="pre">set_locpot_vec</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair.set_locpot_vec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair.set_locpot_vec" title="Permalink to this definition">¶</a></dt>
+<dd><p>A method aims to initialize Locpot vector of the Locpot object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>None</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair.elongate_locpot">
+<span class="sig-name descname"><span class="pre">elongate_locpot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">multi_left</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_right</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_to_insert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_to_insert_manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_to_insert_manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locpot_vec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_left_increment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_right_increment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair.elongate_locpot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair.elongate_locpot" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>multi_left</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1</em>) – It determines how many times to multiply the repeated locpot that will be inserted.</p></li>
+<li><p><strong>multi_right</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1</em>) – It determines how many times to multiply the repeated locpot that will be inserted.</p></li>
+<li><p><strong>manual</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – This is a flag the tells if we are going to treat the elongation manually or automatically.
+If it is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, we should supply more arguments as desribed in the next lines.</p></li>
+<li><p><strong>pos_to_insert</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If <cite>manual =</cite> <code class="docutils literal notranslate"><span class="pre">True</span></code>, then it must be supplied. It determines where to insert the multiplied repeated locpot.
+It is a position in the spatial grid.</p></li>
+<li><p><strong>multi_manual</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If <cite>manual =</cite> <code class="docutils literal notranslate"><span class="pre">True</span></code>, then it must be supplied. It determines how many times to
+multiply the repeated locpot that will be inserted manually.</p></li>
+<li><p><strong>z_to_insert_manual</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If <cite>manual =</cite> <code class="docutils literal notranslate"><span class="pre">True</span></code>, then it must be supplied. The manully inserted spatial coordinates vector.</p></li>
+<li><p><strong>v_to_insert_manual</strong> (<em>np.array</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – If  <cite>manual =</cite> <code class="docutils literal notranslate"><span class="pre">True</span></code>, then it must be supplied. The manully inserted local potential vector.</p></li>
+<li><p><strong>locpot_vec</strong> (<cite>numpy.ndarray</cite>, (N,2), optional, default: None) – It is not necessarily goes with the ‘manual’ option. It just gives more flexibilty whether the
+elongation will be held on the class instance locpot attribute, or on an external locpot vector supplied as an argument. This is a two-column vector,
+the first column is for the spatial coordinates and the second column is for the local potential.</p></li>
+<li><p><strong>return_left_increment</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default : False</em>) – If it is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, the difference between the original and the elongated local potential vectors will be returned together with the reference point.</p></li>
+<li><p><strong>return_right_increment</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default : False</em>) – If it is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, the difference between the original and the elongated local potential vectors will be returned together with the reference point.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>z_Locp, v_Locp</strong> (<em>np.array, np.array</em>) – The new elongated spatial grid vector, the new elongated local potential vector.</p></li>
+<li><p><strong>z_Locp, v_Locp, delta, ref point</strong> (<em>np.array, np.array, float, float</em>) – If return_right_increment or return_right_increment == <code class="docutils literal notranslate"><span class="pre">True</span></code>
+It returns also difference between the original and the elongated local potential vectors will be returned together with the reference point, if
+it was specified to return those.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Locpot_class.Locpot_yair.find_locpot_shift">
+<span class="sig-name descname"><span class="pre">find_locpot_shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locpot_vec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk_locpot_vec_first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk_locpot_vec_second</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#Locpot_yair.find_locpot_shift"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.Locpot_yair.find_locpot_shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the relative vertical shifts between the materials in the interface system and their corresponding
+bulk materials locpot.
+Afterwards, these value have to be substracted from the potential vector
+of the interface system in order to be inserted in the elongation procedure.</p>
+<p class="rubric">Notes</p>
+<p>If your system does not have an interface, you should supply one of the arguments <cite>bulk_locpot_vec_first</cite> or <cite>bulk_locpot_vec_second</cite>
+with a locpot-formed vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>locpot_vec</strong> (<cite>numpy.ndarray</cite>, (N,2), optional, default: None) – This is a two-column vector, the first column is for the spatial coordinates and the second column is for the local potential.</p></li>
+<li><p><strong>bulk_locpot_vec_first</strong> (<cite>numpy.ndarray</cite>, (N,2), optional, default: None) – This is a two-column vector, the first column is for the spatial coordinates and the second column is for the local potential. This locpot matrix
+should describe the locpot matrix of the first bulk material.</p></li>
+<li><p><strong>bulk_locpot_vec_second</strong> (<cite>numpy.ndarray</cite>, (N,2), optional, default: None) – This is a two-column vector, the first column is for the spatial coordinates and the second column is for the local potential. This locpot matrix
+should describe the locpot matrix of the second bulk material.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>list, [float, float]</em> – The relative shifts of both the left and the right side materials.
+In the form of 2 floats -&gt; [,] -&gt; where [left_shift,right_shift].
+If the system does not contain an interface, it returns the shift only from the one part that was supplied.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Locpot_class.find_bulk_like_potential">
+<span class="sig-prename descclassname"><span class="pre">Locpot_class.</span></span><span class="sig-name descname"><span class="pre">find_bulk_like_potential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interface_position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_of_peaks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#find_bulk_like_potential"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.find_bulk_like_potential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notice that this is not a class method, it outside the scope of the class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> (<em>np.array</em>) – Should be as the same size as wave_function vector. spatial coordinates vector.</p></li>
+<li><p><strong>v</strong> (<em>np.array</em>) – Should be as the same size as wave_function vector. Local potential vector.</p></li>
+<li><p><strong>interface_position</strong> (<em>float</em>) – The position where the interface is located. If you dont have an interface in your system,
+just input the <cite>0</cite> or the beginning position of the system.</p></li>
+<li><p><strong>num_of_peaks</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 3</em>) – If you have an interface, you can choose how many peaks to look for in the system locpot.</p></li>
+<li><p><strong>limits</strong> (<em>listrray_like</em><em>, </em><em>(</em><em>float</em><em>, </em><em>float</em><em>)</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – This parameter is an optional for flexibility for chosing the range of where the pick the bulk-like potential.
+This should be input as a list of two floats, the first one is for the left limit and the second one is for the left limit.
+Should be given as the same units of the spatial coordainates vector, z.</p></li>
+<li><p><strong>left</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – A flag that determines whether to look at the left side hand of the system.</p></li>
+<li><p><strong>right</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – A flag that determines whether to look at the right side hand of the system.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np.array, np.array, float</em> – The first argument it returns is the spatial grid range where the bulk-like locpot was evaluated.
+The second argument it returns is the local potential range where the bulk-like locpot was evaluated.
+The last argument it returns is the start position where the bulk-like locpot was found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Locpot_class.find_initial_position_to_initialize_next_to_interface">
+<span class="sig-prename descclassname"><span class="pre">Locpot_class.</span></span><span class="sig-name descname"><span class="pre">find_initial_position_to_initialize_next_to_interface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_inter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initi_side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Left'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#find_initial_position_to_initialize_next_to_interface"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.find_initial_position_to_initialize_next_to_interface" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> (<em>np.array</em>) – z spatial coordinates vector</p></li>
+<li><p><strong>v</strong> (<em>np.array</em>) – Local potential vector.</p></li>
+<li><p><strong>pos_inter</strong> (<em>float</em>) – The position where we want to initialize our wave-function next to. Usually will be the interface position if
+our system has one, otherwise - you can choose from where it begins.</p></li>
+<li><p><strong>initi_side</strong> (<em>str</em><em>, </em><em>{'Left'</em><em>, </em><em>'Right'}</em><em>, </em><em>optional</em><em>, </em><em>default: 'Left'</em>) – Choices are in the bracket. It tells from where we sholud start and look for the next initialization point.</p></li>
+<li><p><strong>init_position</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – In cases when we do not have an interface or want it to be initialized somewhere else.
+Must accompanied with <cite>pos_inter=0</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>z0</strong> (<em>float</em>) – The initial position where to wave-fucntion is centered at.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Locpot_class.insert_potential_into_position">
+<span class="sig-prename descclassname"><span class="pre">Locpot_class.</span></span><span class="sig-name descname"><span class="pre">insert_potential_into_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_vec_original</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_vec_original</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_to_insert</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_vec_to_insert</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_vec_to_insert</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#insert_potential_into_position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.insert_potential_into_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Very not elegant and complex function.
+It should be primitive. It does not looking for something, but just gets as input all the needed parameters
+and insert all the vectors at the right place where it was asked to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z_vec_original</strong> (<em>np.array</em>) – The coords vector whom we wish to insert the other vector.</p></li>
+<li><p><strong>v_vec_original</strong> (<em>np.array</em>) – The potential vector whom we wish to insert the other vector.</p></li>
+<li><p><strong>index_to_insert</strong> (<em>int</em>) – The index respect to the z_original_vec where from him and further we
+are going to insert the desired vector.</p></li>
+<li><p><strong>z_vec_to_insert</strong> (<em>np.array</em>) – The new coords vector we wish insert into the original vector.</p></li>
+<li><p><strong>v_vec_to_insert</strong> (<em>np.array</em>) – The new potential vector we wish insert into the original vector.</p></li>
+<li><p><strong>multi</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 0</em>) – When the default value is <cite>0</cite>, it means that there is no multiplication.
+Describes how many time we would like to insert the vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np.array, np.array</em> – The first one is the new elongated coords vector. The second one is the new elongated potential vector.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Locpot_class.fix_potential_edges">
+<span class="sig-prename descclassname"><span class="pre">Locpot_class.</span></span><span class="sig-name descname"><span class="pre">fix_potential_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#fix_potential_edges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.fix_potential_edges" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> (<em>np.array</em>) – Represents the spatial coords vector.</p></li>
+<li><p><strong>v</strong> (<em>np.array</em>) – Represnts the v local potential vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>new_z</strong> (<em>np.array</em>) – The new z coordinates with matching number of samples with respect with
+the fixed potential vector.</p></li>
+<li><p><strong>new_v</strong> (<em>np.array</em>) – The new v potential vector after its edges were fixed to be well suitable
+to be stiched.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Locpot_class.multiply_z_v_vecs">
+<span class="sig-prename descclassname"><span class="pre">Locpot_class.</span></span><span class="sig-name descname"><span class="pre">multiply_z_v_vecs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_vec_original</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_vec_original</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#multiply_z_v_vecs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.multiply_z_v_vecs" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z_vec_original</strong> (<em>np.array</em>) – The spatial coordinates vector whom we wish to multiply.</p></li>
+<li><p><strong>v_vec_original</strong> (<em>np.array</em>) – The potential vector whom we wish to multiply.</p></li>
+<li><p><strong>multi</strong> (<em>int</em>) – Describes how many time we would like to multiply the vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>np.array, np.array</em> – The first array is the new multiplied spatial coordinates vector. The second array is the new multiplied local potential vector.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Locpot_class.is_peak_maximum">
+<span class="sig-prename descclassname"><span class="pre">Locpot_class.</span></span><span class="sig-name descname"><span class="pre">is_peak_maximum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">peaks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#is_peak_maximum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.is_peak_maximum" title="Permalink to this definition">¶</a></dt>
+<dd><p class="rubric">Notes</p>
+<p>Pay attention - the peak is within the range of the peaks and not at its edges.
+Otherwise it will raise an index out-of-range error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peaks</strong> (<cite>numpt.ndarray</cite>, (N,2)) – The first column stands for the spatial poisition of the peaks.
+The second column is for the height of the peaks.</p></li>
+<li><p><strong>peak</strong> (<em>list:</em><em> [</em><em>int</em><em>,</em><em>float</em><em>,</em><em>float</em><em>]</em>) – The first argument is for the index of the peak inside the peaks array,
+The second argument is for the position of the peak. The third argument is for the height of the peak.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>bool</em> – This function checks whether a given peak is a maximum point. (or at least a local maximum).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Locpot_class.is_peak_minimum">
+<span class="sig-prename descclassname"><span class="pre">Locpot_class.</span></span><span class="sig-name descname"><span class="pre">is_peak_minimum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">peaks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Locpot_class.html#is_peak_minimum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Locpot_class.is_peak_minimum" title="Permalink to this definition">¶</a></dt>
+<dd><p class="rubric">Notes</p>
+<p>Pay attention - the peak is within the range of the peaks and not at its edges.
+Otherwise it will raise an index out-of-range error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peaks</strong> (<cite>numpt.ndarray</cite>, (N,2)) – The first column stands for the spatial poisition of the peaks.
+The second column is for the height of the peaks.</p></li>
+<li><p><strong>peak</strong> (<em>list:</em><em> [</em><em>int</em><em>,</em><em>float</em><em>,</em><em>float</em><em>]</em>) – The first argument is for the index of the peak inside the peaks array,
+The second argument is for the position of the peak. The third argument is for the height of the peak.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>bool</em> – This function checks whether a given peak is a minimum point. (or at least a local minimum).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Help_function_library_yair.html" class="btn btn-neutral float-right" title="Help_function_library_yair module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Stage_2.html" class="btn btn-neutral float-left" title="Stage_2 module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, MCT&amp;YairR&amp;NadavS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,602 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Stage_1 &mdash; Wave_Function_Propagation 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wave_Function_Propagation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wave_Function_Propagation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Module code</a> &raquo;</li>
+        
+      <li>Stage_1</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for Stage_1</h1><div class="highlight"><pre>
+<span></span>
+
+<span class="kn">from</span> <span class="nn">Locpot_class</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">Help_function_library_yair</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+<div class="viewcode-block" id="Stage_1"><a class="viewcode-back" href="../Stage_1.html#Stage_1.Stage_1">[docs]</a><span class="k">class</span> <span class="nc">Stage_1</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This class aimed to create the initial wavefunction in its most general form, when it is</span>
+<span class="sd">    initialized within the range of one of the materials in the system.</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+<div class="viewcode-block" id="Stage_1.__init__"><a class="viewcode-back" href="../Stage_1.html#Stage_1.Stage_1.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">locpot_vec</span><span class="p">,</span> <span class="n">E0</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">z_original</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">Max_z_iterations</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                 <span class="n">Noriginal</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">allmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">To_plot</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">allmax</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        locpot_vec : `numpy.ndarray`, (N,2)</span>
+<span class="sd">                This is a 2 column matrix. The first colmn is ``z``, the spatial coordinates vector and second is ``v``, the local potential vector.</span>
+<span class="sd">        E0 : float</span>
+<span class="sd">                The initial energy of the wave-function. Accounted to the total energy of an electron at the bottom of the cunduction band (CBM).</span>
+<span class="sd">        sigma : float</span>
+<span class="sd">                The standard deviation of the guassian electron wave-pocket.</span>
+<span class="sd">        z_original : np.array, array_like, optional, default: None</span>
+<span class="sd">                The original, initial spatial coordinates vector.</span>
+<span class="sd">        Max_z_iterations : int, optional, default: 10</span>
+<span class="sd">                The maximum number of the iterations that the loop will be going through until convergence of the drid density.</span>
+<span class="sd">        Noriginal : int, optional, default: None</span>
+<span class="sd">                The initial/ original number of spatial steps, the number of `dx`&#39;s in the spatial coordinates vector. If not</span>
+<span class="sd">                supplied, it will take the value of ``len(z_original)``</span>
+<span class="sd">        allmin : `numpy.ndarray`, (N,2), default: None</span>
+<span class="sd">                This is a matrix with 2 columns. The first column holds the minimum points position, and the second column</span>
+<span class="sd">                holds the minimum points height. If not supplied it will take the matrix the resultd from</span>
+<span class="sd">                ``find_peaks_minima(self.locpot_vec[:, 0], self.locpot_vec[:, 1])``.</span>
+<span class="sd">        To_plot : bool, optional, defulat: False</span>
+<span class="sd">                A flag to determine whether to plot or not.</span>
+<span class="sd">        allmax : `numpy.ndarray`, (N,2), default: None</span>
+<span class="sd">                This is a matrix with 2 columns. The first column holds the maximum points position, and the second column</span>
+<span class="sd">                holds the maximum points height. If not supplied it will take the matrix the resultd from</span>
+<span class="sd">                ``find_peaks_maxima(self.locpot_vec[:, 0], self.locpot_vec[:, 1])``.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span> <span class="o">=</span> <span class="n">locpot_vec</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">E0</span> <span class="o">=</span> <span class="n">E0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Max_z_iterations</span> <span class="o">=</span> <span class="n">Max_z_iterations</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Noriginal</span> <span class="o">=</span> <span class="n">Noriginal</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">Noriginal</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Noriginal</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># determined by the</span>
+        <span class="c1"># last position in the locpot of the whole system</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">allmin</span> <span class="o">=</span> <span class="n">allmin</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">allmin</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">allmin</span> <span class="o">=</span> <span class="n">find_peaks_minima</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">allmax</span> <span class="o">=</span> <span class="n">allmax</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">allmax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">allmax</span> <span class="o">=</span> <span class="n">find_peaks_maxima</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">z_original</span> <span class="o">=</span> <span class="n">z_original</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_original</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">z_original</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">1.3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delta_z_step</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">Noriginal</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">delta_z_step</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">delta_z_step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Noriginal</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span> <span class="o">=</span> <span class="n">sigma</span>  <span class="c1"># uncertainty in position</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cons</span> <span class="o">=</span> <span class="n">Constants</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">To_plot</span> <span class="o">=</span> <span class="n">To_plot</span></div>
+
+<div class="viewcode-block" id="Stage_1.initial_wavefunc_energies"><a class="viewcode-back" href="../Stage_1.html#Stage_1.Stage_1.initial_wavefunc_energies">[docs]</a>    <span class="k">def</span> <span class="nf">initial_wavefunc_energies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">Multi</span> <span class="o">=</span> <span class="mi">5</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+
+<span class="sd">        Class method of Stage1. Calculate the initial Wavefunction</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        N : int/float, optional, default: None</span>
+<span class="sd">                It can be delivered in order the determine the number of the samples</span>
+<span class="sd">                that the wavefunction will be constructed based on it.</span>
+<span class="sd">        Multi : int/float, optional, default: 5</span>
+<span class="sd">                If the initial unit is too small, you can choose</span>
+<span class="sd">                how many times to mulyiply it in order to produce the initial wavefucntion</span>
+<span class="sd">                matched the larger unit cell.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        np.array, np.array, np.array, np.array, np.array, int</span>
+<span class="sd">                zz - the new coords divided into N segments.</span>
+<span class="sd">                vv - the new potential vector divided into N segments.</span>
+<span class="sd">                psi0 - the initial wave function. (N,)</span>
+<span class="sd">                T0 - initial kinteic energy. Float</span>
+<span class="sd">                v0 - potential expectation value. Float.</span>
+<span class="sd">                N - The number of the partition.</span>
+
+<span class="sd">       &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">N</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">N</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Noriginal</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="n">cons</span><span class="o">.</span><span class="n">A2m</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delta_z_step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">/</span> <span class="n">N</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delta_z_step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">A2m</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delta_z_step</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">z_original</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">A2m</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">z_original</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">A2m</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">)</span>
+        <span class="c1"># self.dz = self.find_peak_half_max_width()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">E0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">eV2J</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">E0</span><span class="p">)</span>
+        <span class="n">zz</span><span class="p">,</span> <span class="n">vv</span> <span class="o">=</span> <span class="n">interpolate_cubic</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+        <span class="n">vv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">eV2J</span><span class="p">(</span><span class="n">vv</span><span class="p">)</span>
+
+        <span class="c1"># =============================================================================</span>
+        <span class="c1">#      finding x0 - the initial position of an electron at a minimum point</span>
+        <span class="c1">#      inside a material - far from the interface</span>
+        <span class="c1"># =============================================================================</span>
+        <span class="n">mid_min</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">allmin</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">allmin</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]),</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">mid_min</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">allmin</span><span class="p">[</span><span class="n">mid_min</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">mid_min</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">A2m</span><span class="p">(</span><span class="n">mid_min</span><span class="p">)</span>
+        <span class="n">z0</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_original</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">mid_min</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">zz</span><span class="p">,</span> <span class="n">initial_wave_func</span> <span class="o">=</span> <span class="n">get_psi0</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">,</span> <span class="n">z0</span><span class="p">,</span> <span class="n">zz</span><span class="p">)</span>  <span class="c1"># k0 does not affect the V_expec</span>
+        <span class="n">v0</span> <span class="o">=</span> <span class="n">potential_expectation_nadav</span><span class="p">(</span><span class="n">initial_wave_func</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">zz</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">vv</span><span class="p">)</span>
+        <span class="n">v0</span> <span class="o">=</span> <span class="n">cons</span><span class="o">.</span><span class="n">eV2J</span><span class="p">(</span><span class="n">v0</span><span class="p">)</span>
+        <span class="c1"># =============================================================================</span>
+        <span class="c1">#         finding initial momentum k0 from solving the equa (1) from the doc development.</span>
+        <span class="c1"># =============================================================================</span>
+        <span class="n">T0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">E0</span> <span class="o">-</span> <span class="n">v0</span>
+        <span class="n">gauss_wave_function</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">z</span><span class="p">:</span> <span class="n">gaussian_function</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">cons</span><span class="o">.</span><span class="n">m2A</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">),</span> <span class="n">cons</span><span class="o">.</span><span class="n">m2A</span><span class="p">(</span><span class="n">z0</span><span class="p">))</span>
+        <span class="c1"># k0 does not affect the normalization factor.</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">normalize_wave_function</span><span class="p">(</span><span class="n">gauss_wave_function</span><span class="p">,</span><span class="n">units</span><span class="o">=</span><span class="s1">&#39;Meter&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">k0</span> <span class="o">=</span> <span class="n">initial_momentum_yair</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">E0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">,</span> <span class="n">z0</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">T0</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="n">allmax</span> <span class="o">=</span> <span class="n">find_peaks_maxima</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">ignore_local_maxima</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">maxima</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]))</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">allmax</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]]</span>
+            <span class="n">widths</span><span class="p">,</span> <span class="n">width_heights</span><span class="p">,</span> <span class="n">left_ips</span><span class="p">,</span> <span class="n">right_ips</span> <span class="o">=</span> <span class="n">ss</span><span class="o">.</span><span class="n">peak_widths</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">maxima</span><span class="p">,</span> <span class="n">rel_height</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+            <span class="n">max_index</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="n">max_coord</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">new_left_ips</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">new_right_ips</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">new_widths</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">left_ips</span><span class="p">)):</span>
+                <span class="n">new_left_ips</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">left_ips</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">max_coord</span><span class="p">)</span> <span class="o">/</span> <span class="n">max_index</span><span class="p">)</span>
+                <span class="n">new_right_ips</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">right_ips</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">max_coord</span><span class="p">)</span> <span class="o">/</span> <span class="n">max_index</span><span class="p">)</span>
+                <span class="n">new_widths</span><span class="o">.</span><span class="n">append</span><span class="p">(((</span><span class="n">right_ips</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">max_coord</span><span class="p">)</span> <span class="o">/</span> <span class="n">max_index</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">left_ips</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">max_coord</span><span class="p">)</span> <span class="o">/</span> <span class="n">max_index</span><span class="p">)</span>
+            <span class="n">anotations</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">new_left_ips</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">new_left_ips</span><span class="p">)</span>
+            <span class="n">new_right_ips</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">new_right_ips</span><span class="p">)</span>
+            <span class="n">new_widths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">new_widths</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">new_widths</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">k0</span> <span class="o">=</span> <span class="n">initial_momentum_yair</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">E0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">,</span> <span class="n">z0</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">T0</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="n">k0</span> <span class="o">=</span> <span class="n">initial_momentum_yair</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">E0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="n">z0</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">T0</span><span class="p">)</span>
+
+        <span class="c1"># =============================================================================</span>
+        <span class="c1">#         calculate the initial wave function vector</span>
+        <span class="c1"># =============================================================================</span>
+        <span class="n">zz</span><span class="p">,</span> <span class="n">initial_wave_func</span> <span class="o">=</span> <span class="n">get_psi0</span><span class="p">(</span><span class="n">k0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">,</span> <span class="n">z0</span><span class="p">,</span> <span class="n">zz</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">zz</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">vv</span><span class="p">),</span> <span class="n">k0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">initial_wave_func</span><span class="p">),</span> \
+               <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">T0</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">v0</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">N</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Stage_1.calculate_E0"><a class="viewcode-back" href="../Stage_1.html#Stage_1.Stage_1.calculate_E0">[docs]</a>    <span class="k">def</span> <span class="nf">calculate_E0</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zz</span><span class="p">,</span> <span class="n">vv</span><span class="p">,</span> <span class="n">psi0</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Class method of Stage1. Calculating E0 per each N partition of space(z)</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        zz : np.array</span>
+<span class="sd">                Vector of the spatial grid. (spatial coordinates)</span>
+<span class="sd">        vv : np.array</span>
+<span class="sd">                Vector of the local potential.</span>
+<span class="sd">        psi0 : np.array</span>
+<span class="sd">                The wave-function vector.</span>
+<span class="sd">        N : int, optional, default: None</span>
+<span class="sd">                The number of spatial steps, the number of `dx`&#39;s.</span>
+<span class="sd">         &#39;&#39;&#39;</span>
+        <span class="n">zz</span> <span class="o">=</span> <span class="n">to_column_vec</span><span class="p">(</span><span class="n">zz</span><span class="p">)</span>
+        <span class="n">zz</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">A2m</span><span class="p">(</span><span class="n">zz</span><span class="p">)</span>
+        <span class="n">vv</span> <span class="o">=</span> <span class="n">to_column_vec</span><span class="p">(</span><span class="n">vv</span><span class="p">)</span>
+        <span class="n">vv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">eV2J</span><span class="p">(</span><span class="n">vv</span><span class="p">)</span>
+        <span class="n">psi0</span> <span class="o">=</span> <span class="n">to_column_vec</span><span class="p">(</span><span class="n">psi0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">A2m</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">N</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">N</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Noriginal</span>
+        <span class="n">T0num</span> <span class="o">=</span> <span class="n">kinetic_energy_expectation_value</span><span class="p">(</span><span class="n">psi0</span><span class="p">,</span> <span class="n">zz</span><span class="p">)</span>
+
+        <span class="n">dz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">to_1D_vec</span><span class="p">(</span><span class="n">zz</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="c1"># calculationg the average potential energy for uniform deltaz</span>
+        <span class="c1"># v0num = potential_expectation_nadav(psi0, dz, vv)</span>
+
+        <span class="n">v0num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">dz</span> <span class="o">*</span> <span class="n">psi0</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">to_column_vec</span><span class="p">(</span><span class="n">to_1D_vec</span><span class="p">(</span><span class="n">vv</span><span class="p">)</span> <span class="o">*</span> <span class="n">to_1D_vec</span><span class="p">(</span><span class="n">psi0</span><span class="p">))))</span>
+        <span class="c1"># [J]</span>
+        <span class="n">v0num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">v0num</span><span class="p">)</span>
+
+        <span class="c1"># calculationg the average total energy</span>
+        <span class="n">E0num</span> <span class="o">=</span> <span class="n">T0num</span> <span class="o">+</span> <span class="n">v0num</span>  <span class="c1"># [J]</span>
+
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">E0num</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">T0num</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">v0num</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Stage_1.converge_main_axis_grid"><a class="viewcode-back" href="../Stage_1.html#Stage_1.Stage_1.converge_main_axis_grid">[docs]</a>    <span class="k">def</span> <span class="nf">converge_main_axis_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tol</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Converges the spatial grid of the system according to total energy difference of the tol parameter supplied</span>
+<span class="sd">        as an input. The difference relates to two consecutive iterations. It also demands that the spatial spacing not</span>
+<span class="sd">        be less than tol*sigma.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        tol : float, optional, default: 0.001</span>
+<span class="sd">                It refers to tolerance. And it can make the condition for convergence</span>
+<span class="sd">                more or less strict.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        zz_convg : np.array</span>
+<span class="sd">                The converged spatial grid vector.</span>
+<span class="sd">        vv_convg : np.array</span>
+<span class="sd">                The converged local potential vector.</span>
+<span class="sd">        psi0_convg : np.array</span>
+<span class="sd">                The converged wave function values vector.</span>
+<span class="sd">        grid_density : float</span>
+<span class="sd">                The converged spatial grid density. It is defined as the number of the spatial points divided by the system length.</span>
+<span class="sd">        psi0_dic : dict</span>
+<span class="sd">                It holds all the necessary parameters that relate to the converged system and the convereged wave-function.</span>
+<span class="sd">                psi0_dic = {&#39;k0&#39; : , &#39;sigma&#39;:  , &#39;E0&#39;:  ,&#39;zz&#39;: zz_convg, &#39;vv&#39;:vv_convg,&#39;N&#39;: N_convg,&#39;psi0&#39;:psi0_convg}</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Noriginal</span><span class="p">)</span>
+        <span class="n">E0num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[],</span> <span class="p">[]])</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">T0num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[],</span> <span class="p">[]])</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">v0num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[],</span> <span class="p">[]])</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">T0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[],</span> <span class="p">[]])</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">v0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[],</span> <span class="p">[]])</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">k0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[],</span> <span class="p">[]])</span><span class="o">.</span><span class="n">T</span>
+
+        <span class="c1"># calculating the first two E0num</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="c1"># calculating the initial wavefunction and potential energy according to N</span>
+            <span class="n">zz</span><span class="p">,</span> <span class="n">vv</span><span class="p">,</span> <span class="n">k0_initial</span><span class="p">,</span> <span class="n">psi0</span><span class="p">,</span> <span class="n">T0_run</span><span class="p">,</span> <span class="n">v0_run</span><span class="p">,</span> <span class="n">N_new</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">initial_wavefunc_energies</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">N</span> <span class="o">!=</span> <span class="n">N_new</span><span class="p">:</span>
+                <span class="n">N</span> <span class="o">=</span> <span class="n">N_new</span>
+
+            <span class="c1"># calculating the initial numerical total energy according to N</span>
+            <span class="n">E0num_run</span><span class="p">,</span> <span class="n">T0num_run</span><span class="p">,</span> <span class="n">v0num_run</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculate_E0</span><span class="p">(</span><span class="n">zz</span><span class="p">,</span> <span class="n">vv</span><span class="p">,</span> <span class="n">psi0</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+            <span class="n">k0_run</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">k0_initial</span><span class="p">)</span>
+            <span class="c1"># saving the initials energies per number of steps</span>
+            <span class="n">E0num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">E0num</span><span class="p">,</span> <span class="p">[</span><span class="n">E0num_run</span><span class="p">,</span> <span class="n">N</span><span class="p">]])</span>
+            <span class="n">T0num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">T0num</span><span class="p">,</span> <span class="p">[</span><span class="n">T0num_run</span><span class="p">,</span> <span class="n">N</span><span class="p">]])</span>
+            <span class="n">v0num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">v0num</span><span class="p">,</span> <span class="p">[</span><span class="n">v0num_run</span><span class="p">,</span> <span class="n">N</span><span class="p">]])</span>
+            <span class="n">T0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">T0</span><span class="p">,</span> <span class="p">[</span><span class="n">T0_run</span><span class="p">,</span> <span class="n">N</span><span class="p">]])</span>
+            <span class="n">v0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">v0</span><span class="p">,</span> <span class="p">[</span><span class="n">v0_run</span><span class="p">,</span> <span class="n">N</span><span class="p">]])</span>
+            <span class="n">k0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">k0</span><span class="p">,</span> <span class="p">[</span><span class="n">k0_run</span><span class="p">,</span> <span class="n">N</span><span class="p">]])</span>
+            <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span>
+            <span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+
+        <span class="n">iteration</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delta_z_step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">/</span> <span class="n">N</span>
+        <span class="n">flag</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">while</span> <span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delta_z_step</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">tol</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">A2m</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">J2eV</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">((</span><span class="n">E0num</span><span class="p">[</span><span class="n">iteration</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">E0num</span><span class="p">[</span><span class="n">iteration</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">])))</span> <span class="o">&lt;</span> <span class="n">tol</span><span class="p">))</span> <span class="ow">and</span> <span class="n">iteration</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">Max_z_iterations</span><span class="p">:</span>
+            <span class="n">flag</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">zz</span><span class="p">,</span> <span class="n">vv</span><span class="p">,</span> <span class="n">k0_initial</span><span class="p">,</span> <span class="n">psi0</span><span class="p">,</span> <span class="n">T0_run</span><span class="p">,</span> <span class="n">v0_run</span><span class="p">,</span> <span class="n">N_new</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">initial_wavefunc_energies</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">N</span> <span class="o">!=</span> <span class="n">N_new</span><span class="p">:</span>
+                <span class="n">N</span> <span class="o">=</span> <span class="n">N_new</span>
+            <span class="c1"># calculating the initial numerical total energy according to N</span>
+            <span class="n">E0num_run</span><span class="p">,</span> <span class="n">T0num_run</span><span class="p">,</span> <span class="n">v0num_run</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculate_E0</span><span class="p">(</span><span class="n">zz</span><span class="p">,</span> <span class="n">vv</span><span class="p">,</span> <span class="n">psi0</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+            <span class="n">k0_run</span> <span class="o">=</span> <span class="n">k0_initial</span>
+            <span class="n">k0_run</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">k0_initial</span><span class="p">)</span>
+            <span class="c1"># saving the initials energies per number of steps</span>
+            <span class="n">E0num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">E0num</span><span class="p">,</span> <span class="p">[</span><span class="n">E0num_run</span><span class="p">,</span> <span class="n">N</span><span class="p">]])</span>
+            <span class="n">T0num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">T0num</span><span class="p">,</span> <span class="p">[</span><span class="n">T0num_run</span><span class="p">,</span> <span class="n">N</span><span class="p">]])</span>
+            <span class="n">v0num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">v0num</span><span class="p">,</span> <span class="p">[</span><span class="n">v0num_run</span><span class="p">,</span> <span class="n">N</span><span class="p">]])</span>
+            <span class="n">T0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">T0</span><span class="p">,</span> <span class="p">[</span><span class="n">T0_run</span><span class="p">,</span> <span class="n">N</span><span class="p">]])</span>
+            <span class="n">v0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">v0</span><span class="p">,</span> <span class="p">[</span><span class="n">v0_run</span><span class="p">,</span> <span class="n">N</span><span class="p">]])</span>
+            <span class="n">k0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">k0</span><span class="p">,</span> <span class="p">[</span><span class="n">k0_run</span><span class="p">,</span> <span class="n">N</span><span class="p">]])</span>
+            <span class="n">N_1</span> <span class="o">=</span> <span class="n">N</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span>
+            <span class="n">N_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">N_1</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">delta_z_step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">/</span> <span class="n">N_1</span>
+
+            <span class="n">iteration</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">iteration</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">Max_z_iterations</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;maximum z-direction convergence iterations was reached&#39;</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span>  <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delta_z_step</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">tol</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">A2m</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">J2eV</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">((</span><span class="n">E0num</span><span class="p">[</span><span class="n">iteration</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">E0num</span><span class="p">[</span><span class="n">iteration</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">])))</span> <span class="o">&lt;</span> <span class="n">tol</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;convergence limit was reached&#39;</span><span class="p">)</span>
+                    <span class="k">break</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">N</span> <span class="o">=</span> <span class="n">N_1</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">flag</span><span class="p">:</span>
+            <span class="n">N</span> <span class="o">=</span> <span class="n">N</span>  <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span>
+            <span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delta_z_step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">/</span> <span class="n">N</span>
+        <span class="n">psi0_convg</span> <span class="o">=</span> <span class="n">psi0</span>
+        <span class="n">E0_convg</span> <span class="o">=</span> <span class="n">E0num</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">eV2J</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">N_convg</span> <span class="o">=</span> <span class="n">N</span>
+        <span class="n">deltaz_convg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delta_z_step</span>
+        <span class="n">zz_convg</span> <span class="o">=</span> <span class="n">zz</span>
+        <span class="c1"># kk_convg = kk</span>
+        <span class="n">vv_convg</span> <span class="o">=</span> <span class="n">vv</span>
+        <span class="n">grid_density</span> <span class="o">=</span> <span class="n">N</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">m2A</span><span class="p">(</span><span class="n">zz_convg</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">psi0_dic</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;k0&#39;</span> <span class="p">:</span><span class="n">k0</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;sigma&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">,</span> <span class="s1">&#39;E0&#39;</span><span class="p">:</span> <span class="n">E0_convg</span><span class="p">,</span><span class="s1">&#39;zz&#39;</span><span class="p">:</span> <span class="n">zz_convg</span><span class="p">,</span> <span class="s1">&#39;vv&#39;</span><span class="p">:</span><span class="n">vv_convg</span><span class="p">,</span><span class="s1">&#39;N&#39;</span><span class="p">:</span> <span class="n">N_convg</span><span class="p">,</span><span class="s1">&#39;psi0&#39;</span><span class="p">:</span><span class="n">psi0_convg</span><span class="p">}</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">zz_convg</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">N_convg</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">zz_convg</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">N_convg</span> <span class="o">&lt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">zz_convg</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Z coordinates grid is not consistent with the N samples converged value.&#39;</span><span class="p">)</span>
+            <span class="c1">#  if np.shape(kk)[0] != N_convg:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;k coordinates grid is not consistent with the N samples converged value.&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">vv_convg</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">N_convg</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">vv_convg</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">N_convg</span> <span class="o">&lt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">vv_convg</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;V potential values number of measurements is not consistent with the N samples converged value.&#39;</span><span class="p">)</span>
+
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">To_plot</span><span class="p">:</span>
+<span class="c1">##################################</span>
+<span class="c1">### This part is only for plotting.</span>
+<span class="c1">##################################</span>
+            <span class="n">font</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;family&#39;</span><span class="p">:</span> <span class="s1">&#39;serif&#39;</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">}</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+            <span class="n">gs</span> <span class="o">=</span> <span class="n">GridSpec</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;initial Wave function and probabilty, $| \psi_0 |^2$&#39;</span><span class="p">)</span>
+            <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">m2A</span><span class="p">(</span><span class="n">zz_convg</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">psi0_convg</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1E-5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$real(\psi_0) $&#39;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">m2A</span><span class="p">(</span><span class="n">zz_convg</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">psi0_convg</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1E-10</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$| \psi_0 |^2$&#39;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Z axis, [$\AA$]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$| \psi_0 |^2$, real($\psi_0$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fancybox</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shadow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">})</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;.py&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.pdf&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;pdf&quot;</span><span class="p">)</span>
+
+            <span class="n">font</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;family&#39;</span><span class="p">:</span> <span class="s1">&#39;serif&#39;</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">}</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+            <span class="n">gs</span> <span class="o">=</span> <span class="n">GridSpec</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Original and Spline Potential energy , $V(z)$&#39;</span><span class="p">)</span>
+            <span class="n">ax_1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">ax_1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">m2A</span><span class="p">(</span><span class="n">zz_convg</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">J2eV</span><span class="p">(</span><span class="n">vv_convg</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Spline&#39;</span><span class="p">)</span>
+            <span class="n">ax_1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">m2A</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]),</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">J2eV</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locpot_vec</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]),</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span>
+                      <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Original&#39;</span><span class="p">)</span>
+            <span class="n">ax_1</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+            <span class="n">ax_1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Z axis, [$\AA$]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+            <span class="n">ax_1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Potential Energy, V(z), [eV]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+            <span class="n">ax_1</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fancybox</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shadow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">})</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;.py&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.pdf&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;pdf&quot;</span><span class="p">)</span>
+
+            <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+            <span class="n">gs</span> <span class="o">=</span> <span class="n">GridSpec</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Convergence plots Vs N , #samples&#39;</span><span class="p">)</span>
+            <span class="n">Ax_i</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">Ax_i</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Samples#, N&quot;</span><span class="p">)</span>
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Initial Total energy, $E_0$ [eV]&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Initial Kinetic energy, $T_0$ [eV]&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Initiail Potential energy energy,$V_0$ [eV]&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">E0num</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">J2eV</span><span class="p">(</span><span class="n">E0num</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]),</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;E0num&#39;</span><span class="p">)</span>
+            <span class="n">tx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">E0num</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+            <span class="n">ty</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">J2eV</span><span class="p">(</span><span class="n">E0num</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]))</span>
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$E_0$ = </span><span class="si">{}</span><span class="s2"> [eV], input as $E_c$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">J2eV</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">E0</span><span class="p">),</span> <span class="s2">&quot;.3f&quot;</span><span class="p">)),</span>
+                             <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">tx</span><span class="p">,</span> <span class="n">ty</span><span class="p">),</span> <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ticklabel_format</span><span class="p">(</span><span class="n">useOffset</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">useMathText</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;sci&#39;</span><span class="p">)</span>
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">FormatStrFormatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%.4f</span><span class="s1">&#39;</span><span class="p">))</span>
+
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T0num</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">J2eV</span><span class="p">(</span><span class="n">T0num</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;T0num&#39;</span><span class="p">)</span>
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T0</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">J2eV</span><span class="p">(</span><span class="n">T0</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span>
+                         <span class="n">label</span><span class="o">=</span><span class="s1">&#39;T0 - calc from E0-V0&#39;</span><span class="p">)</span>
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ticklabel_format</span><span class="p">(</span><span class="n">useOffset</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">useMathText</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;sci&#39;</span><span class="p">)</span>
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">FormatStrFormatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%.3f</span><span class="s1">&#39;</span><span class="p">))</span>
+
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v0num</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">J2eV</span><span class="p">(</span><span class="n">v0num</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;V0num&#39;</span><span class="p">)</span>
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v0</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">J2eV</span><span class="p">(</span><span class="n">v0</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span>
+                         <span class="n">label</span><span class="o">=</span><span class="s1">&#39;V0 - calc as exp-Value&#39;</span><span class="p">)</span>
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">ticklabel_format</span><span class="p">(</span><span class="n">useOffset</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">useMathText</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;sci&#39;</span><span class="p">)</span>
+            <span class="n">Ax_i</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">FormatStrFormatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%.5f</span><span class="s1">&#39;</span><span class="p">))</span>
+
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">Ax_i</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+                <span class="n">Ax_i</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fancybox</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shadow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">})</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">zz_convg</span><span class="p">,</span> <span class="n">vv_convg</span><span class="p">,</span> <span class="n">psi0_convg</span><span class="p">,</span> <span class="n">grid_density</span><span class="p">,</span> <span class="n">psi0_dic</span></div>
+
+<div class="viewcode-block" id="Stage_1.get_psi_dic"><a class="viewcode-back" href="../Stage_1.html#Stage_1.Stage_1.get_psi_dic">[docs]</a>    <span class="k">def</span> <span class="nf">get_psi_dic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        dict</span>
+<span class="sd">            It retruns a initial wave function parameters in a dictionary for the next stage.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Noriginal</span><span class="p">)</span>
+        <span class="n">zz</span><span class="p">,</span> <span class="n">vv</span><span class="p">,</span> <span class="n">k0_initial</span><span class="p">,</span> <span class="n">psi0</span><span class="p">,</span> <span class="n">T0_run</span><span class="p">,</span> <span class="n">v0_run</span><span class="p">,</span> <span class="n">N_new</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">initial_wavefunc_energies</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+        <span class="n">grid_density</span> <span class="o">=</span> <span class="n">N</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons</span><span class="o">.</span><span class="n">m2A</span><span class="p">(</span><span class="n">zz</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">psi0_dic</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;k0&#39;</span><span class="p">:</span> <span class="n">k0_initial</span><span class="p">,</span> <span class="s1">&#39;sigma&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">,</span> <span class="s1">&#39;E0&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">E0</span><span class="p">,</span> <span class="s1">&#39;zz&#39;</span><span class="p">:</span> <span class="n">zz</span><span class="p">,</span> <span class="s1">&#39;vv&#39;</span><span class="p">:</span> <span class="n">vv</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">:</span> <span class="n">N</span><span class="p">,</span>
+                    <span class="s1">&#39;psi0&#39;</span><span class="p">:</span> <span class="n">psi0</span><span class="p">}</span>
+        <span class="k">return</span> <span class="n">psi0_dic</span></div>
+
+
+
+<div class="viewcode-block" id="Stage_1.set_To_plot"><a class="viewcode-back" href="../Stage_1.html#Stage_1.Stage_1.set_To_plot">[docs]</a>    <span class="k">def</span> <span class="nf">set_To_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">To_plot</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        A class method to set the ``To_plot`` attribute.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        To_plot : bool</span>
+<span class="sd">            It gets True or False whether to plot or not.</span>
+
+<span class="sd">        This is a class method that enables to turn on plotting options or</span>
+<span class="sd">        to turn them off. True = for turning on, False = for turning off.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">To_plot</span> <span class="o">=</span> <span class="n">To_plot</span></div></div>
+
+
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../Stage_1.html#Stage_1.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">pass</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, MCT&amp;YairR&amp;NadavS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
